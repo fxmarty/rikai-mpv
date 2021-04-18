@@ -1,0 +1,932 @@
+@charset "UTF-8";
+
+body {
+    overflow:hidden;
+}
+
+*:lang(en) {
+  /* Meiryo renders more crisply than Arial on Windows */
+  font-family: Meiryo, sans-serif;
+}
+
+.window {
+  max-width: 600px;
+  contain: content;
+  border-radius: 5px;
+  box-shadow: 2px 2px 1px rgba(100, 100, 100, 0.25);
+  font: normal 14px sans-serif;
+}
+
+.window.hidden {
+  display: none;
+}
+
+/* Word display */
+
+.wordlist {
+  display: flex;
+  flex-direction: column;
+}
+
+.entry,
+.more {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  padding: 3px 8px;
+}
+
+.wordlist > .entry:first-child {
+  padding-top: 6px;
+}
+
+.wordlist > .entry:last-child {
+  padding-bottom: 6px;
+}
+
+.entry,
+.entry * {
+  line-height: 1.3;
+}
+
+.w-kanji {
+  font-size: 18px;
+  margin-right: 0.7em;
+}
+
+.w-kanji .w-unmatched,
+.w-kanji .w-separator {
+  opacity: 0.6;
+}
+
+.w-kana {
+  font-size: 18px;
+  margin-right: 0.3em;
+}
+
+.w-kana > .w-heiban {
+  border-top: 1.5px dotted currentcolor !important;
+}
+
+.w-kana > .w-binary {
+  /* Add a gap below so the border doesn't overlap with the definition */
+  display: inline-block;
+  margin-bottom: 0.2em;
+}
+
+.w-kana > .w-binary > * {
+  /* Drop gaps between borders */
+  margin: 0;
+  /* Make room for the borders
+   * (and to compensate for the extra margin we added to the wrapper above) */
+  font-size: 90%;
+}
+
+.w-kana > .w-binary > .h-l {
+  border-top: 1.5px dotted currentcolor !important;
+  border-right: 1.5px dotted currentcolor !important;
+}
+
+.w-kana > .w-binary > .l-h {
+  border-bottom: 1.5px dotted currentcolor !important;
+  border-right: 1.5px dotted currentcolor !important;
+}
+
+.w-kana > .w-binary > .h {
+  border-top: 1.5px dotted currentcolor !important;
+}
+
+.w-kana > .w-binary > .l {
+  border-bottom: 1.5px dotted currentcolor !important;
+}
+
+.w-romaji {
+  font-size: 14px;
+  margin-right: 0.3em;
+}
+
+.w-kana + .w-romaji {
+  margin-left: 0.3em;
+}
+
+.w-kanji .w-head-info,
+.w-kana .w-head-info {
+  margin-left: 0.3em;
+  font-size: 10px;
+}
+
+.w-kanji .svgicon,
+.w-kana .svgicon {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 3px;
+  margin-right: 3px;
+  fill: currentcolor;
+}
+
+.w-kanji .svgicon path,
+.w-kana .svgicon path {
+  fill: currentcolor;
+}
+
+.w-conj {
+  color: #ffe0a0;
+  font-size: 12px;
+}
+
+.w-def {
+  font-size: 13px;
+}
+
+.w-def .w-inf {
+  font-size: 12px;
+}
+
+/* Give group headings a bit more space. They typically consist of a series of tags
+   which can easily look cramped when there are tags on the line above or below it. */
+.w-def .w-group-head {
+  margin-top: 2px;
+  margin-bottom: 3px;
+}
+
+/* Especially when we have group headings amongst other definitions, we want a bit more
+   vertical space before they start. */
+.w-def ol + .w-group-head {
+  margin-top: 6px;
+}
+
+.w-def ol {
+  padding-left: 1.5em;
+  list-style-type: numeric !important;
+  margin: 0;
+}
+
+.w-def ol li {
+  list-style-type: numeric !important;
+  font-size: 13px;
+}
+
+.w-def .w-type {
+  font-size: 12px;
+}
+
+.w-def .tag {
+  font-size: 10px;
+  border-radius: 3px;
+  margin-left: 0.5em;
+  padding: 0px 3px;
+  white-space: nowrap;
+}
+
+.w-def .tag-fem {
+  background: rgba(255, 100, 100, 0.5);
+}
+
+.w-def .tag-masc {
+  background: rgba(0, 100, 255, 0.5);
+}
+
+.w-def .tag-place {
+  background: rgba(50, 200, 50, 0.6);
+}
+
+.w-def .w-field {
+  background: rgba(50, 200, 50, 0.6);
+}
+
+.w-def .w-misc {
+  background: rgba(0, 100, 255, 0.5);
+}
+
+.w-def .w-dial {
+  background: rgba(255, 100, 100, 0.5);
+}
+
+.w-def .w-pos,
+.w-def .w-field,
+.w-def .w-misc,
+.w-def .w-dial {
+  margin-left: 0em;
+  margin-right: 0.5em;
+}
+
+.w-def .w-lsrc,
+.w-def .w-lsrc * {
+  font-size: 12px;
+}
+
+.window .entry.-selected {
+  background: rgba(255, 255, 206);
+  border-radius: 2px;
+}
+
+.window .entry.-selected .w-def .tag {
+  color: black;
+  border-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.window .entry.-selected .w-kanji {
+  color: #4c63a8;
+}
+
+.window .entry.-selected .w-kana,
+.window .entry.-selected .w-romaji {
+  color: #029902;
+}
+
+.window .entry.-selected .w-def,
+.window .entry.-selected .w-def * {
+  color: rgb(0, 0, 50);
+}
+
+.window .entry.-selected .w-conj {
+  color: #ff6300;
+}
+
+.window .entry.-flash {
+  animation: flash 0.5s;
+}
+
+@keyframes flash {
+  from {
+    background: white;
+    color: white;
+  }
+}
+
+.title {
+  font-size: 10px;
+  padding: 10px 10px 6px;
+  border-radius: 5px 5px 0 0;
+  margin-bottom: 3px;
+}
+
+.name-table {
+  padding-bottom: 6px;
+}
+
+.name-table.-multicol {
+  column-count: 2;
+  column-gap: 1em;
+}
+
+.name-table.-multicol .entry {
+  /* Avoid column breaks within an entry */
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.name-table .entry {
+  /*
+   * Something goes funny with the margins in multicol so that the entries
+   * no longer line up.
+   */
+  margin-top: 0;
+}
+
+.name-table .w-def div {
+  margin-bottom: 2px;
+}
+
+/* Kanji display */
+
+.kanji-table {
+  max-width: 450px;
+  padding: 8px 14px;
+}
+
+/* kanji: top part of the kanji table */
+
+.kanji-table .top-part {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.kanji-table .top-part > *:nth-child(2) {
+  flex-grow: 1;
+}
+
+/* kanji: character itself */
+
+.kanji-table .kanji {
+  line-height: 1;
+  font-size: 60px;
+  font-family: serif;
+  text-align: center;
+  margin-inline-end: 20px;
+  padding-top: 0.1em;
+}
+
+.kanji-table.-copy .kanji {
+  background: rgba(255, 255, 206);
+  border-radius: 2px;
+}
+
+.kanji-table.-finished .kanji {
+  animation: flash 0.5s;
+}
+
+/* kanji: readings */
+
+.kanji-table .readings {
+  font-size: 14px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+
+.kanji-table .nanorilabel {
+  font-size: 11px;
+}
+
+/* kanji: meta */
+
+.kanji-table .meta {
+  margin-left: -5px;
+  margin-bottom: 4px;
+}
+
+.kanji-table .meta .tag {
+  font-size: 12px;
+  border: 1px solid currentcolor !important;
+  border-radius: 3px;
+  padding: 2px;
+  margin: 2px;
+}
+
+/* kanji: meanings */
+
+.kanji-table .meanings {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* kanji: grade, freq, strokes */
+
+.kanji-table .misc {
+  display: flex;
+}
+
+.kanji-table .misc > * {
+  flex-grow: 1;
+  display: flex;
+  align-items: baseline;
+}
+
+.kanji-table .misc > :not(:first-child) {
+  margin-left: 12px;
+}
+
+.kanji-table .misc .strokes span,
+.kanji-table .misc .freq span,
+.kanji-table .misc .grade span {
+  font-size: 13px;
+}
+
+.kanji-table .misc .freq .denom {
+  font-size: 9px;
+}
+
+.kanji-table .misc .svgicon {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+  fill: currentcolor;
+}
+
+/* kanji: components */
+
+.kanji-table .components {
+  margin-block-start: 10px;
+  /* Subtract the padding at the start of the row so the text lines up */
+  margin-inline-start: -1em;
+}
+
+.kanji-table .components table {
+  border-collapse: collapse;
+}
+
+.kanji-table .components .char,
+.kanji-table .components .reading,
+.kanji-table .components .meaning,
+.kanji-table .components .-baseradical td {
+  vertical-align: top;
+  font-size: 11px;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.kanji-table .components .reading {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.kanji-table .components .-radical .char {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.kanji-table .components .-radical .meaning {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.kanji-table .components .-baseradical td {
+  font-style: italic;
+}
+
+/* kanji: references */
+
+.references {
+  --bg-overhang: 8px;
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  grid-column-gap: 0.5em;
+  margin-left: calc(-1 * var(--bg-overhang));
+  margin-right: calc(-1 * var(--bg-overhang));
+  width: calc(100% + 2 * var(--bg-overhang));
+}
+
+.references .ref {
+  display: flex;
+  padding: 2px var(--bg-overhang);
+  border-radius: 0.5em;
+  justify-content: space-between;
+}
+
+.references .name,
+.references .value {
+  font-size: 12px;
+}
+
+.references .value {
+  margin-left: 0.5em;
+}
+
+/*
+ * Keyboard keys
+ */
+
+.copy {
+  margin-top: 3px;
+  position: relative;
+  width: 100%;
+  max-height: 3em;
+}
+
+.copy > .keys,
+.copy > .status {
+  padding: 5px 8px 5px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.copy > .keys kbd {
+  color: rgb(10, 10, 10);
+  font-size: 0.8rem;
+  font-family: monospace;
+  height: 1.2rem;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  background: white;
+  border: 1px solid #909090 !important;
+}
+
+.copy > .status {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.copy.-finished > .keys,
+.copy.-error > .keys {
+  animation: fade-out 0.4s linear forwards;
+}
+
+.copy.-finished > .status {
+  opacity: 0;
+  animation: fade-in 0.4s linear forwards, fade-out 0.3s 0.9s forwards;
+}
+
+.copy.-finished {
+  animation: roll-up 0.3s 1s forwards;
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes roll-up {
+  to {
+    max-height: 0;
+  }
+}
+
+.copy.-error > .status {
+  opacity: 0;
+  animation: fade-in 0.4s linear forwards;
+}
+
+.copy.-error > .status {
+  background: rgba(255, 204, 204, 0.8);
+  color: #b43e3e;
+}
+
+/*
+ * Bonus name
+ */
+
+.wordlist .bonus-name {
+  margin-top: 8px;
+  margin-bottom: 3px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.wordlist .bonus-name .more {
+  padding: 0px 8px;
+}
+
+/*
+ * Meta information
+ */
+
+.wordlist .meta {
+  margin-top: 8px;
+  margin-bottom: 3px;
+  padding: 3px 8px;
+  display: flex;
+  align-items: baseline;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.wordlist .meta .era,
+.wordlist .meta .era ruby,
+.wordlist .meta .equals,
+.wordlist .meta .seireki {
+  font-size: 22px;
+}
+
+.wordlist .meta .era rt {
+  font-size: 12px;
+}
+
+.wordlist .meta .equals {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/*
+ * Theme - blue
+ */
+
+.window.-blue {
+  color: white;
+}
+
+.window.-blue {
+  background: #5c73b8;
+}
+
+.window.-blue .w-kanji {
+  color: #b7e7ff;
+}
+
+.window.-blue .kanji-table.-copy .kanji {
+  color: #4c63a8;
+}
+
+.window.-blue .w-conj {
+  color: #ffe0a0;
+}
+
+.window.-blue .w-def .tag {
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+}
+
+.window.-blue .title {
+  background: #4c63a8;
+  color: #ffffff;
+}
+
+.window.-blue .kanji-table .kanji {
+  color: #b7e7ff;
+}
+
+.window.-blue .kanji-table .components .-radical * {
+  background: #4c63a8;
+  color: #b7e7ff;
+}
+
+.window.-blue .kanji-table .components .-baseradical td {
+  color: #b7e7ff;
+}
+
+.window.-blue .w-kana,
+.window.-blue .w-romaji {
+  color: #c0ffc0;
+}
+
+.window.-blue .kanji-table .readings {
+  color: #c0ffc0;
+}
+
+.window.-blue .kanji-table .okurigana {
+  color: #a0d0ff;
+}
+
+.window.-blue .kanji-table .nanorilabel {
+  color: #e7ffe7;
+}
+
+.window.-blue .references .ref.-highlight {
+  background: #4c63a8;
+}
+
+.window.-blue .references .ref.-highlight * {
+  color: #b7e7ff;
+}
+
+.window.-blue .meta .era,
+.window.-blue .meta .era * {
+  color: #b7e7ff;
+}
+
+.window.-blue .meta .seireki {
+  color: #c0ffc0;
+}
+
+/*
+ * Theme - black
+ */
+
+.window.-black {
+  color: white;
+}
+
+.window.-black {
+  background: #000000;
+}
+
+.window.-black .w-kanji {
+  color: #7070e0;
+}
+
+.window.-black .w-kana,
+.window.-black .w-romaji {
+  color: #20a020;
+}
+
+.window.-black .w-conj {
+  color: #a0a0a0;
+}
+
+.window.-black .w-def .tag {
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+}
+
+.window.-black .entry.-selected .w-kanji {
+  color: #7070e0;
+}
+
+.window.-black .title {
+  background: #303030;
+  color: #e0e0e0;
+}
+
+.window.-black .kanji-table .kanji {
+  color: #ffffff;
+}
+
+.window.-black .kanji-table.-copy .kanji {
+  color: #7070e0;
+}
+
+.window.-black .kanji-table .components .-radical * {
+  background: #505050;
+  color: #e0e0e0;
+}
+
+.window.-black .kanji-table .components .-baseradical td {
+  color: #e0e0e0;
+}
+
+.window.-black .kanji-table .readings {
+  color: #20a020;
+}
+
+.window.-black .kanji-table .okurigana {
+  color: #7070e0;
+}
+
+.window.-black .kanji-table .nanorilabel {
+  color: #e0e0e0;
+}
+
+.window.-black .summary-box > .cell {
+  background: #505050;
+  color: #e0e0e0;
+}
+
+.window.-black .references .ref.-highlight {
+  background: #505050;
+}
+
+.window.-black .references .ref.-highlight * {
+  color: #e0e0e0;
+}
+
+.window.-black .meta .era,
+.window.-black .meta .era * {
+  color: #7070e0;
+}
+
+.window.-black .meta .seireki {
+  color: #20a020;
+}
+
+/*
+ * Theme - lightblue
+ */
+
+.window.-lightblue {
+  color: black;
+}
+
+.window.-lightblue {
+  background: #e6f4ff;
+}
+
+.window.-lightblue .w-kanji {
+  color: #3082bf;
+}
+
+.window.-lightblue .w-kana,
+.window.-lightblue .w-romaji {
+  color: #00b366;
+}
+
+.window.-lightblue .w-conj {
+  color: #808080;
+}
+
+.window.-lightblue .w-def .tag {
+  border: 1px solid rgba(0, 0, 0, 0.3) !important;
+}
+
+.window.-lightblue .title {
+  background: #bfe4ff;
+  color: #000000;
+}
+
+.window.-lightblue .kanji-table .kanji {
+  color: #000000;
+}
+
+.window.-lightblue .kanji-table.-copy .kanji {
+  color: #003d6b;
+}
+
+.window.-lightblue .kanji-table .components .-radical * {
+  background: #dff1ff;
+  color: #003d6b;
+}
+
+.window.-lightblue .kanji-table .components .-baseradical td {
+  color: #003d6b;
+}
+
+.window.-lightblue .kanji-table .readings {
+  color: #00b366;
+}
+
+.window.-lightblue .kanji-table .okurigana {
+  color: #00868b;
+}
+
+.window.-lightblue .kanji-table .nanorilabel {
+  color: #000000;
+}
+
+.window.-lightblue .references .ref.-highlight {
+  background: #dff1ff;
+}
+
+.window.-lightblue .references .ref.-highlight * {
+  color: #003d6b;
+}
+
+.window.-lightblue .meta .era,
+.window.-lightblue .meta .era * {
+  color: #003d6b;
+}
+
+.window.-lightblue .meta .seireki {
+  color: #00b366;
+}
+
+/*
+ * Theme - yellow
+ */
+
+.window.-yellow {
+  color: black;
+}
+
+.window.-yellow {
+  color: #111;
+  background: #ffffbf;
+}
+
+.window.-yellow .w-kanji {
+  color: #7070e0;
+}
+
+.window.-yellow .w-kana,
+.window.-yellow .w-romaji {
+  color: #20a020;
+}
+
+.window.-yellow .w-conj {
+  color: #a0a0a0;
+}
+
+.window.-yellow .w-def .tag {
+  border: 1px solid rgba(0, 0, 0, 0.3) !important;
+}
+
+.window.-yellow .entry.-selected {
+  background: #d4edf9;
+}
+
+.window.-yellow .entry.-selected .w-kanji {
+  color: #7070e0;
+}
+
+.window.-yellow .entry.-selected .w-kana,
+.window.-yellow .entry.-selected .w-romaji {
+  color: #20a020;
+}
+
+.window.-yellow .title {
+  background: #f0f0b0;
+  color: #000000;
+}
+
+.window.-yellow .kanji-table .kanji {
+  color: #000000;
+}
+
+.window.-yellow .kanji-table.-copy .kanji {
+  background: #d4edf9;
+  color: #7070e0;
+}
+
+.window.-yellow .kanji-table .components .-radical * {
+  background: #ffffe6;
+  color: #000000;
+}
+
+.window.-yellow .kanji-table .components .-baseradical td {
+  color: #000000;
+}
+
+.window.-yellow .kanji-table .readings {
+  color: #20a020;
+}
+
+.window.-yellow .kanji-table .okurigana {
+  color: #cd5c5c;
+}
+
+.window.-yellow .kanji-table .nanorilabel {
+  color: #000000;
+}
+
+.window.-yellow .references .ref.-highlight {
+  background: #ffffe6;
+}
+
+.window.-yellow .references .ref.-highlight * {
+  color: #000000;
+}
+
+.window.-yellow .meta .era,
+.window.-yellow .meta .era * {
+  color: #7070e0;
+}
+
+.window.-yellow .meta .seireki {
+  color: #20a020;
+}

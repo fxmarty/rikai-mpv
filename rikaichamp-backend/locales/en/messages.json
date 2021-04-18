@@ -1,0 +1,1886 @@
+{
+  "command_toggle_checking": {
+    "message": "Checking for updated dictionary data...",
+    "description": "Tooltip for toolbar button when checking for updates."
+  },
+  "command_toggle_description": {
+    "message": "Toggle Rikaichamp on/off",
+    "description": "Tooltip for toolbar button to turn Rikaichamp on or off"
+  },
+  "command_toggle_disabled": {
+    "message": "Rikaichamp disabled",
+    "description": "Tooltip for toolbar button when disabled."
+  },
+  "command_toggle_downloading": {
+    "message": "Downloading dictionary data...",
+    "description": "Tooltip for toolbar button when downloading updates."
+  },
+  "command_toggle_enabled": {
+    "message": "Rikaichamp enabled",
+    "description": "Tooltip for toolbar button when enabled."
+  },
+  "command_toggle_loading": {
+    "message": "Rikaichamp loading...",
+    "description": "Tooltip for toolbar button when loading."
+  },
+  "command_toggle_update_error": {
+    "message": "Failed to update dictionary data",
+    "description": "Tooltip for toolbar button when we failed to update."
+  },
+  "command_toggle_updating": {
+    "message": "Applying dictionary data...",
+    "description": "Tooltip for toolbar button when applying updates."
+  },
+  "content_copied_entry": {
+    "message": "Copied entry",
+    "description": "Overlay shown after copying an entry to the clipboard."
+  },
+  "content_copied_fields": {
+    "message": "Copied tab-delimited fields",
+    "description": "Overlay shown after copying entry as a tab-delimited fields to the clipboard."
+  },
+  "content_copied_word": {
+    "message": "Copied word",
+    "description": "Overlay shown after copying a word to the clipboard."
+  },
+  "content_copy_error": {
+    "message": "Failed to copy to clipboard",
+    "description": "Message shown in overlay when we couldn't copy to the clipboard"
+  },
+  "content_copy_keys_entry_label": {
+    "message": "entry",
+    "description": "Label for key to copy a dictionary entry to the clipboard"
+  },
+  "content_copy_keys_fields_label": {
+    "message": "tab-separated",
+    "description": "Label for key to copy a tab-separated set of fields to the clipboard"
+  },
+  "content_copy_keys_kanji_label": {
+    "message": "kanji",
+    "description": "Label for key to copy a single kanji character to the clipboard"
+  },
+  "content_copy_keys_label": {
+    "message": "Copy:",
+    "description": "Label at start of row describing keys for copying information to the clipboard"
+  },
+  "content_copy_keys_next_label": {
+    "message": "next",
+    "description": "Label for key to move the copy highlight to the next entry"
+  },
+  "content_copy_keys_word_label": {
+    "message": "word",
+    "description": "Label for key to copy a word to the clipboard"
+  },
+  "content_kanji_base_radical": {
+    "message": "from $char$ ($readings$)",
+    "description": "The string used to describe the base radical",
+    "placeholders": {
+      "char": {
+        "content": "$1",
+        "example": "⾡"
+      },
+      "readings": {
+        "content": "$2",
+        "example": "しんにょう、しんにゅう"
+      }
+    }
+  },
+  "content_kanji_components_label": {
+    "message": "components",
+    "description": "The label to give to kanji components when copying a kanji entry"
+  },
+  "content_kanji_frequency_label": {
+    "message": "Freq. ",
+    "description": "The prefix to the xxx / 2,500 frequency information"
+  },
+  "content_kanji_grade_general_use": {
+    "message": "General use",
+    "description": "Label for kanji marked as general use"
+  },
+  "content_kanji_grade_label": {
+    "message": "Grade $grade$",
+    "description": "The label for kanji in grades 1 - 6",
+    "placeholders": {
+      "grade": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "content_kanji_grade_name_use": {
+    "message": "Name use",
+    "description": "Label for kanji marked as name use"
+  },
+  "content_kanji_kentei_level": {
+    "message": "$level$",
+    "placeholders": {
+      "level": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "content_kanji_kentei_level_pre": {
+    "message": "Pre-$level$",
+    "placeholders": {
+      "level": {
+        "content": "$1",
+        "example": "2"
+      }
+    }
+  },
+  "content_kanji_meta_kokuji": {
+    "message": "kokuji",
+    "description": "Meta label for kokuji (kanji originated in Japan)"
+  },
+  "content_kanji_meta_phantom_kanji": {
+    "message": "phantom kanji",
+    "description": "Meta label for phantom kanji/ghost characters"
+  },
+  "content_kanji_nanori_label": {
+    "message": "Names (名乗り)",
+    "description": "Label given to name readings"
+  },
+  "content_kanji_radical_label": {
+    "message": "radical",
+    "description": "The title given to the box showing radical information"
+  },
+  "content_kanji_strokes_label": {
+    "message": "$strokes$ strokes",
+    "description": "The description of the number of strokes",
+    "placeholders": {
+      "strokes": {
+        "content": "$1",
+        "example": "7"
+      }
+    }
+  },
+  "content_kanji_strokes_label_1": {
+    "message": "1 stroke",
+    "description": "The description of the number of strokes when there is exactly 1 stroke"
+  },
+  "content_names_dictionary": {
+    "message": "Names Dictionary",
+    "description": "The title used at the top of the popup when showing the names dictionary"
+  },
+  "content_names_tag_char": {
+    "message": "character"
+  },
+  "content_names_tag_company": {
+    "message": "company"
+  },
+  "content_names_tag_creat": {
+    "message": "creature"
+  },
+  "content_names_tag_dei": {
+    "message": "deity"
+  },
+  "content_names_tag_ev": {
+    "message": "event"
+  },
+  "content_names_tag_fem": {
+    "message": "female"
+  },
+  "content_names_tag_fict": {
+    "message": "fiction"
+  },
+  "content_names_tag_given": {
+    "message": "given"
+  },
+  "content_names_tag_leg": {
+    "message": "legend"
+  },
+  "content_names_tag_masc": {
+    "message": "male"
+  },
+  "content_names_tag_myth": {
+    "message": "mythology"
+  },
+  "content_names_tag_obj": {
+    "message": "object"
+  },
+  "content_names_tag_org": {
+    "message": "org"
+  },
+  "content_names_tag_oth": {
+    "message": "other"
+  },
+  "content_names_tag_person": {
+    "message": "full name"
+  },
+  "content_names_tag_place": {
+    "message": "place"
+  },
+  "content_names_tag_product": {
+    "message": "product"
+  },
+  "content_names_tag_relig": {
+    "message": "religion"
+  },
+  "content_names_tag_serv": {
+    "message": "service"
+  },
+  "content_names_tag_station": {
+    "message": "station"
+  },
+  "content_names_tag_surname": {
+    "message": "surname"
+  },
+  "content_names_tag_unclass": {
+    "message": "unclassified"
+  },
+  "content_names_tag_work": {
+    "message": "work"
+  },
+  "deinflect_adv": {
+    "message": "adv"
+  },
+  "deinflect_alternate": {
+    "message": " or ",
+    "description": "Separator to use between de-inflection reasons when there are multiple possibilities"
+  },
+  "deinflect_ba": {
+    "message": "-ba"
+  },
+  "deinflect_causative": {
+    "message": "causative"
+  },
+  "deinflect_causative_passive": {
+    "message": "causative passive"
+  },
+  "deinflect_chau": {
+    "message": "-chau"
+  },
+  "deinflect_continuous": {
+    "message": "continuous"
+  },
+  "deinflect_imperative": {
+    "message": "imperative"
+  },
+  "deinflect_imperative_negative": {
+    "message": "imperative negative"
+  },
+  "deinflect_ki": {
+    "message": "-ki"
+  },
+  "deinflect_masu_stem": {
+    "message": "masu stem"
+  },
+  "deinflect_nasai": {
+    "message": "-nasai"
+  },
+  "deinflect_negative": {
+    "message": "negative"
+  },
+  "deinflect_noun": {
+    "message": "noun"
+  },
+  "deinflect_passive": {
+    "message": "passive"
+  },
+  "deinflect_past": {
+    "message": "past"
+  },
+  "deinflect_polite": {
+    "message": "polite"
+  },
+  "deinflect_polite_negative": {
+    "message": "polite negative"
+  },
+  "deinflect_polite_past": {
+    "message": "polite past"
+  },
+  "deinflect_polite_past_negative": {
+    "message": "polite past negative"
+  },
+  "deinflect_polite_volitional": {
+    "message": "polite volitional"
+  },
+  "deinflect_potential": {
+    "message": "potential"
+  },
+  "deinflect_potential_or_passive": {
+    "message": "potential or passive"
+  },
+  "deinflect_sou": {
+    "message": "-sou"
+  },
+  "deinflect_sugiru": {
+    "message": "-sugiru"
+  },
+  "deinflect_suru_noun": {
+    "message": "-suru"
+  },
+  "deinflect_tai": {
+    "message": "-tai"
+  },
+  "deinflect_tara": {
+    "message": "-tara"
+  },
+  "deinflect_tari": {
+    "message": "-tari"
+  },
+  "deinflect_te": {
+    "message": "-te"
+  },
+  "deinflect_toku": {
+    "message": "-te oku"
+  },
+  "deinflect_volitional": {
+    "message": "volitional"
+  },
+  "deinflect_zu": {
+    "message": "-zu"
+  },
+  "dial_label_9s": {
+    "message": "Kyushu dialect",
+    "description": "Label used to describe senses whose dialect is '9s' (Kyushu dialect)"
+  },
+  "dial_label_ho": {
+    "message": "Hokkaido dialect",
+    "description": "Label used to describe senses whose dialect is 'ho' (Hokkaido dialect)"
+  },
+  "dial_label_ks": {
+    "message": "Kansai dialect",
+    "description": "Label used to describe senses whose dialect is 'ks' (Kansai dialect)"
+  },
+  "dial_label_kt": {
+    "message": "Kanto dialect",
+    "description": "Label used to describe senses whose dialect is 'kt' (Kanto dialect)"
+  },
+  "dial_label_ky": {
+    "message": "Kyoto dialect",
+    "description": "Label used to describe senses whose dialect is 'ky' (Kyoto dialect)"
+  },
+  "dial_label_na": {
+    "message": "Nagano dialect",
+    "description": "Label used to describe senses whose dialect is 'na' (Nagano dialect)"
+  },
+  "dial_label_ok": {
+    "message": "Ryuukyuu dialect",
+    "description": "Label used to describe senses whose dialect is 'ok' (Ryuukyuu dialect)"
+  },
+  "dial_label_os": {
+    "message": "Osaka dialect",
+    "description": "Label used to describe senses whose dialect is 'os' (Osaka dialect)"
+  },
+  "dial_label_th": {
+    "message": "Tohoku dialect",
+    "description": "Label used to describe senses whose dialect is 'th' (Tohoku dialect)"
+  },
+  "dial_label_ts": {
+    "message": "Tosa dialect",
+    "description": "Label used to describe senses whose dialect is 'ts' (Tosa dialect)"
+  },
+  "dial_label_tsug": {
+    "message": "Tsugaru dialect",
+    "description": "Label used to describe senses whose dialect is 'tsug' (Tsugaru dialect)"
+  },
+  "error_command_could_not_parse": {
+    "message": "Could not parse command $command$",
+    "placeholders": {
+      "command": {
+        "content": "$1",
+        "example": "Ctrl+T "
+      }
+    }
+  },
+  "error_command_disallowed_modifier_key": {
+    "message": "Modifier '$modifier$' is not allowed",
+    "placeholders": {
+      "modifier": {
+        "content": "$1",
+        "example": "Meta"
+      }
+    }
+  },
+  "error_command_has_no_key": {
+    "message": "Must specify a key"
+  },
+  "error_command_is_missing_modifier_key": {
+    "message": "A modifier must be specified unless using a function key"
+  },
+  "error_command_key_is_not_allowed": {
+    "message": "Key '$key$' is not allowed",
+    "placeholders": {
+      "key": {
+        "content": "$1",
+        "example": "Enter"
+      }
+    }
+  },
+  "error_command_media_key_with_modifier_key": {
+    "message": "Cannot specify modifiers and media keys"
+  },
+  "error_command_too_many_modifiers": {
+    "message": "Too many modifiers"
+  },
+  "error_ctrl_alt_unsupported": {
+    "message": "Combining Alt and Ctrl is not supported in this version of Firefox",
+    "description": "Tooltip displayed when the user attempts to set a hotkey combination including both Ctrl and Alt in a version of Firefox prior to 63"
+  },
+  "error_ctrl_alt_warning": {
+    "message": "Combining Alt and Ctrl is not supported in earlier versions of Firefox (prior to 63)",
+    "description": "Tooltip displayed when the user attempts to set a hotkey combination including both Ctrl and Alt in a version of Firefox later than 63"
+  },
+  "error_loading_dictionary": {
+    "message": "Error loading dictionary. Please try again.",
+    "description": "Tooltip shown when the dictionary fails to load"
+  },
+  "extension_description": {
+    "message": "Translate Japanese by hovering over words.",
+    "description": "Description of the what the extension does."
+  },
+  "field_label_agric": {
+    "message": "agriculture",
+    "description": "Label applied to senses with the 'agric' field"
+  },
+  "field_label_anat": {
+    "message": "anatomy",
+    "description": "Label applied to senses with the 'anat' field"
+  },
+  "field_label_archeol": {
+    "message": "archeolology",
+    "description": "Label applied to senses with the 'archeol' field"
+  },
+  "field_label_archit": {
+    "message": "architecture",
+    "description": "Label applied to senses with the 'archit' field"
+  },
+  "field_label_art": {
+    "message": "art",
+    "description": "Label applied to senses with the 'art' field"
+  },
+  "field_label_astron": {
+    "message": "astronomy",
+    "description": "Label applied to senses with the 'astron' field"
+  },
+  "field_label_audvid": {
+    "message": "audiovisual",
+    "description": "Label applied to senses with the 'audvid' field"
+  },
+  "field_label_aviat": {
+    "message": "aviation",
+    "description": "Label applied to senses with the 'aviat' field"
+  },
+  "field_label_baseb": {
+    "message": "baseball",
+    "description": "Label applied to senses with the 'baseb' field"
+  },
+  "field_label_biochem": {
+    "message": "biochemistry",
+    "description": "Label applied to senses with the 'biochem' field"
+  },
+  "field_label_biol": {
+    "message": "biology",
+    "description": "Label applied to senses with the 'biol' field"
+  },
+  "field_label_bot": {
+    "message": "botany",
+    "description": "Label applied to senses with the 'bot' field"
+  },
+  "field_label_Buddh": {
+    "message": "Buddhism",
+    "description": "Label applied to senses with the 'Buddh' field"
+  },
+  "field_label_bus": {
+    "message": "business",
+    "description": "Label applied to senses with the 'bus' field"
+  },
+  "field_label_chem": {
+    "message": "chemistry",
+    "description": "Label applied to senses with the 'chem' field"
+  },
+  "field_label_Christn": {
+    "message": "Christianity",
+    "description": "Label applied to senses with the 'Christn' field"
+  },
+  "field_label_comp": {
+    "message": "computing",
+    "description": "Label applied to senses with the 'comp' field"
+  },
+  "field_label_cryst": {
+    "message": "crystallography",
+    "description": "Label applied to senses with the 'cryst' field"
+  },
+  "field_label_ecol": {
+    "message": "ecology",
+    "description": "Label applied to senses with the 'ecol' field"
+  },
+  "field_label_econ": {
+    "message": "economics",
+    "description": "Label applied to senses with the 'econ' field"
+  },
+  "field_label_elec": {
+    "message": "electricity",
+    "description": "Label applied to senses with the 'elec' field"
+  },
+  "field_label_electr": {
+    "message": "electronics",
+    "description": "Label applied to senses with the 'electr' field"
+  },
+  "field_label_embryo": {
+    "message": "embryology",
+    "description": "Label applied to senses with the 'embryo' field"
+  },
+  "field_label_engr": {
+    "message": "engineering",
+    "description": "Label applied to senses with the 'engr' field"
+  },
+  "field_label_ent": {
+    "message": "entomology",
+    "description": "Label applied to senses with the 'ent' field"
+  },
+  "field_label_finc": {
+    "message": "finance",
+    "description": "Label applied to senses with the 'finc' field"
+  },
+  "field_label_fish": {
+    "message": "fishing",
+    "description": "Label applied to senses with the 'fish' field"
+  },
+  "field_label_food": {
+    "message": "food",
+    "description": "Label applied to senses with the 'food' field"
+  },
+  "field_label_gardn": {
+    "message": "gardening",
+    "description": "Label applied to senses with the 'gardn' field"
+  },
+  "field_label_genet": {
+    "message": "genetics",
+    "description": "Label applied to senses with the 'genet' field"
+  },
+  "field_label_geogr": {
+    "message": "geography",
+    "description": "Label applied to senses with the 'geogr' field"
+  },
+  "field_label_geol": {
+    "message": "geology",
+    "description": "Label applied to senses with the 'geol' field"
+  },
+  "field_label_geom": {
+    "message": "geometry",
+    "description": "Label applied to senses with the 'geom' field"
+  },
+  "field_label_go": {
+    "message": "Go",
+    "description": "Label applied to senses with the 'go' field"
+  },
+  "field_label_golf": {
+    "message": "golf",
+    "description": "Label applied to senses with the 'golf' field"
+  },
+  "field_label_gramm": {
+    "message": "grammar",
+    "description": "Label applied to senses with the 'gramm' field"
+  },
+  "field_label_grmyth": {
+    "message": "Greek mythology",
+    "description": "Label applied to senses with the 'grmyth' field"
+  },
+  "field_label_hanaf": {
+    "message": "hanafuda",
+    "description": "Label applied to senses with the 'hanaf' field"
+  },
+  "field_label_horse": {
+    "message": "horse racing",
+    "description": "Label applied to senses with the 'horse' field"
+  },
+  "field_label_law": {
+    "message": "law",
+    "description": "Label applied to senses with the 'law' field"
+  },
+  "field_label_ling": {
+    "message": "linguistics",
+    "description": "Label applied to senses with the 'ling' field"
+  },
+  "field_label_logic": {
+    "message": "logic",
+    "description": "Label applied to senses with the 'logic' field"
+  },
+  "field_label_MA": {
+    "message": "martial arts",
+    "description": "Label applied to senses with the 'MA' field"
+  },
+  "field_label_mahj": {
+    "message": "mahjong",
+    "description": "Label applied to senses with the 'mahj' field"
+  },
+  "field_label_math": {
+    "message": "mathematics",
+    "description": "Label applied to senses with the 'math' field"
+  },
+  "field_label_mech": {
+    "message": "mechanical engineering",
+    "description": "Label applied to senses with the 'mech' field"
+  },
+  "field_label_med": {
+    "message": "medicine",
+    "description": "Label applied to senses with the 'med' field"
+  },
+  "field_label_met": {
+    "message": "climate, weather",
+    "description": "Label applied to senses with the 'met' field"
+  },
+  "field_label_mil": {
+    "message": "military",
+    "description": "Label applied to senses with the 'mil' field"
+  },
+  "field_label_music": {
+    "message": "music",
+    "description": "Label applied to senses with the 'music' field"
+  },
+  "field_label_ornith": {
+    "message": "ornithology",
+    "description": "Label applied to senses with the 'ornith' field"
+  },
+  "field_label_paleo": {
+    "message": "paleontology",
+    "description": "Label applied to senses with the 'paleo' field"
+  },
+  "field_label_pathol": {
+    "message": "pathology",
+    "description": "Label applied to senses with the 'pathol' field"
+  },
+  "field_label_pharm": {
+    "message": "pharmacy",
+    "description": "Label applied to senses with the 'pharm' field"
+  },
+  "field_label_phil": {
+    "message": "philosophy",
+    "description": "Label applied to senses with the 'phil' field"
+  },
+  "field_label_photo": {
+    "message": "photography",
+    "description": "Label applied to senses with the 'photo' field"
+  },
+  "field_label_physics": {
+    "message": "physics",
+    "description": "Label applied to senses with the 'physics' field"
+  },
+  "field_label_physiol": {
+    "message": "physiology",
+    "description": "Label applied to senses with the 'physiol' field"
+  },
+  "field_label_print": {
+    "message": "printing",
+    "description": "Label applied to senses with the 'print' field"
+  },
+  "field_label_psych": {
+    "message": "psychology, psychiatry",
+    "description": "Label applied to senses with the 'psych' field"
+  },
+  "field_label_Shinto": {
+    "message": "Shinto",
+    "description": "Label applied to senses with the 'Shinto' field"
+  },
+  "field_label_shogi": {
+    "message": "shogi",
+    "description": "Label applied to senses with the 'shogi' field"
+  },
+  "field_label_sports": {
+    "message": "sports",
+    "description": "Label applied to senses with the 'sports' field"
+  },
+  "field_label_stat": {
+    "message": "statistics",
+    "description": "Label applied to senses with the 'stat' field"
+  },
+  "field_label_sumo": {
+    "message": "sumo",
+    "description": "Label applied to senses with the 'sumo' field"
+  },
+  "field_label_telec": {
+    "message": "telecommunications",
+    "description": "Label applied to senses with the 'telec' field"
+  },
+  "field_label_tradem": {
+    "message": "trademark",
+    "description": "Label applied to senses with the 'tradem' field"
+  },
+  "field_label_vidg": {
+    "message": "video games",
+    "description": "Label applied to senses with the 'vidg' field"
+  },
+  "field_label_zool": {
+    "message": "zoology",
+    "description": "Label applied to senses with the 'zool' field"
+  },
+  "gloss_type_label_expl": {
+    "message": "explanation",
+    "description": "Short annotation used to represent the expl (explanation) gloss type when copying entries to the clipboard"
+  },
+  "gloss_type_label_fig": {
+    "message": "figurative",
+    "description": "Short annotation used to represent the expl (explanation) gloss type when copying entries to the clipboard"
+  },
+  "gloss_type_label_lit": {
+    "message": "literally",
+    "description": "Short annotation used to represent the expl (explanation) gloss type when copying entries to the clipboard"
+  },
+  "gloss_type_short_expl": {
+    "message": "expl.",
+    "description": "Short annotation used to represent the expl (explanation) gloss type when copying entries to the clipboard"
+  },
+  "gloss_type_short_fig": {
+    "message": "fig.",
+    "description": "Short annotation used to represent the expl (explanation) gloss type when copying entries to the clipboard"
+  },
+  "gloss_type_short_lit": {
+    "message": "lit.",
+    "description": "Short annotation used to represent the expl (explanation) gloss type when copying entries to the clipboard"
+  },
+  "head_info_label_ateji": {
+    "message": "ateji",
+    "description": "Short annotation given to kanji headwords that are ateji (kanji chosen to represent sounds)"
+  },
+  "head_info_label_gikun": {
+    "message": "gikun",
+    "description": "Short annotation given to kana headwords with gikun (meaning as reading) or jukujikun (special kanji reading)"
+  },
+  "head_info_label_ikana": {
+    "message": "rare",
+    "description": "Short annotation given to (mostly?) kana headwords that have rare use of kana"
+  },
+  "head_info_label_ikanji": {
+    "message": "rare",
+    "description": "Short annotation given to kanji headwords that have rare use of kanji"
+  },
+  "head_info_label_io": {
+    "message": "rare",
+    "description": "Short annotation given to kanji headwords that have rare use of okurigana"
+  },
+  "head_info_label_okana": {
+    "message": "old",
+    "description": "Short annotation given to kana headwords that use out-dated kana"
+  },
+  "head_info_label_okanji": {
+    "message": "old",
+    "description": "Short annotation given to kanji headwords that use out-dated kanji"
+  },
+  "head_info_label_ukanji": {
+    "message": "usu. kanji",
+    "description": "Short annotation given to kana headwords that are normally written in kanji alone"
+  },
+  "lang_label_af": {
+    "message": "Afrikaans",
+    "description": "Label used to describe senses whose source language is 'af' (Afrikaans)"
+  },
+  "lang_label_ain": {
+    "message": "Ainu",
+    "description": "Label used to describe senses whose source language is 'ain' (Ainu)"
+  },
+  "lang_label_alg": {
+    "message": "Algonquian",
+    "description": "Label used to describe senses whose source language is 'alg' (Algonquian)"
+  },
+  "lang_label_am": {
+    "message": "Amharic",
+    "description": "Label used to describe senses whose source language is 'am' (Amharic)"
+  },
+  "lang_label_ar": {
+    "message": "Arabic",
+    "description": "Label used to describe senses whose source language is 'ar' (Arabic)"
+  },
+  "lang_label_arn": {
+    "message": "Mapuche",
+    "description": "Label used to describe senses whose source language is 'arn' (Mapuche)"
+  },
+  "lang_label_bg": {
+    "message": "Bulgarian",
+    "description": "Label used to describe senses whose source language is 'bg' (Bulgarian)"
+  },
+  "lang_label_bnt": {
+    "message": "Bantu",
+    "description": "Label used to describe senses whose source language is 'bnt' (Bantu)"
+  },
+  "lang_label_bo": {
+    "message": "Tibetan",
+    "description": "Label used to describe senses whose source language is 'bo' (Tibetan)"
+  },
+  "lang_label_br": {
+    "message": "Breton",
+    "description": "Label used to describe senses whose source language is 'br' (Breton)"
+  },
+  "lang_label_chn": {
+    "message": "Chinook",
+    "description": "Label used to describe senses whose source language is 'chn' (Chinook)"
+  },
+  "lang_label_cs": {
+    "message": "Czech",
+    "description": "Label used to describe senses whose source language is 'cs' (Czech)"
+  },
+  "lang_label_da": {
+    "message": "Danish",
+    "description": "Label used to describe senses whose source language is 'da' (Danish)"
+  },
+  "lang_label_de": {
+    "message": "German",
+    "description": "Label used to describe senses whose source language is 'de' (German)"
+  },
+  "lang_label_el": {
+    "message": "Greek",
+    "description": "Label used to describe senses whose source language is 'el' (Greek)"
+  },
+  "lang_label_en": {
+    "message": "English",
+    "description": "Label used to describe senses whose source language is 'en' (English)"
+  },
+  "lang_label_eo": {
+    "message": "Esperanto",
+    "description": "Label used to describe senses whose source language is 'eo' (Esperanto)"
+  },
+  "lang_label_es": {
+    "message": "Spanish",
+    "description": "Label used to describe senses whose source language is 'es' (Spanish)"
+  },
+  "lang_label_et": {
+    "message": "Estonian",
+    "description": "Label used to describe senses whose source language is 'et' (Estonian)"
+  },
+  "lang_label_fa": {
+    "message": "Persian",
+    "description": "Label used to describe senses whose source language is 'fa' (Persian)"
+  },
+  "lang_label_fi": {
+    "message": "Finnish",
+    "description": "Label used to describe senses whose source language is 'fi' (Finnish)"
+  },
+  "lang_label_fil": {
+    "message": "Filipino",
+    "description": "Label used to describe senses whose source language is 'fil' (Filipino)"
+  },
+  "lang_label_fr": {
+    "message": "French",
+    "description": "Label used to describe senses whose source language is 'fr' (French)"
+  },
+  "lang_label_gl": {
+    "message": "Galician",
+    "description": "Label used to describe senses whose source language is 'gl' (Galician)"
+  },
+  "lang_label_grc": {
+    "message": "Ancient Greek",
+    "description": "Label used to describe senses whose source language is 'grc' (Ancient Greek)"
+  },
+  "lang_label_haw": {
+    "message": "Hawaiian",
+    "description": "Label used to describe senses whose source language is 'haw' (Hawaiian)"
+  },
+  "lang_label_he": {
+    "message": "Hebrew",
+    "description": "Label used to describe senses whose source language is 'he' (Hebrew)"
+  },
+  "lang_label_hi": {
+    "message": "Hindi",
+    "description": "Label used to describe senses whose source language is 'hi' (Hindi)"
+  },
+  "lang_label_hr": {
+    "message": "Croatian",
+    "description": "Label used to describe senses whose source language is 'hr' (Croatian)"
+  },
+  "lang_label_hu": {
+    "message": "Hungarian",
+    "description": "Label used to describe senses whose source language is 'hu' (Hungarian)"
+  },
+  "lang_label_id": {
+    "message": "Indonesian",
+    "description": "Label used to describe senses whose source language is 'id' (Indonesian)"
+  },
+  "lang_label_is": {
+    "message": "Icelandic",
+    "description": "Label used to describe senses whose source language is 'is' (Icelandic)"
+  },
+  "lang_label_it": {
+    "message": "Italian",
+    "description": "Label used to describe senses whose source language is 'it' (Italian)"
+  },
+  "lang_label_ka": {
+    "message": "Georgian",
+    "description": "Label used to describe senses whose source language is 'ka' (Georgian)"
+  },
+  "lang_label_km": {
+    "message": "Khmer",
+    "description": "Label used to describe senses whose source language is 'km' (Khmer)"
+  },
+  "lang_label_ko": {
+    "message": "Korean",
+    "description": "Label used to describe senses whose source language is 'ko' (Korean)"
+  },
+  "lang_label_ku": {
+    "message": "Kurdish",
+    "description": "Label used to describe senses whose source language is 'ku' (Kurdish)"
+  },
+  "lang_label_la": {
+    "message": "Latin",
+    "description": "Label used to describe senses whose source language is 'la' (Latin)"
+  },
+  "lang_label_mi": {
+    "message": "Maori",
+    "description": "Label used to describe senses whose source language is 'mi' (Maori)"
+  },
+  "lang_label_ml": {
+    "message": "Malayalam",
+    "description": "Label used to describe senses whose source language is 'ml' (Malayalam)"
+  },
+  "lang_label_mn": {
+    "message": "Mongolian",
+    "description": "Label used to describe senses whose source language is 'mn' (Mongolian)"
+  },
+  "lang_label_mnc": {
+    "message": "Manchu",
+    "description": "Label used to describe senses whose source language is 'mnc' (Manchu)"
+  },
+  "lang_label_mo": {
+    "message": "Moldavian",
+    "description": "Label used to describe senses whose source language is 'mo' (Moldavian)"
+  },
+  "lang_label_ms": {
+    "message": "Malay",
+    "description": "Label used to describe senses whose source language is 'ms' (Malay)"
+  },
+  "lang_label_my": {
+    "message": "Burmese",
+    "description": "Label used to describe senses whose source language is 'my' (Burmese)"
+  },
+  "lang_label_nl": {
+    "message": "Dutch",
+    "description": "Label used to describe senses whose source language is 'nl' (Dutch)"
+  },
+  "lang_label_no": {
+    "message": "Norwegian",
+    "description": "Label used to describe senses whose source language is 'no' (Norwegian)"
+  },
+  "lang_label_pl": {
+    "message": "Polish",
+    "description": "Label used to describe senses whose source language is 'pl' (Polish)"
+  },
+  "lang_label_pt": {
+    "message": "Portuguese",
+    "description": "Label used to describe senses whose source language is 'pt' (Portuguese)"
+  },
+  "lang_label_ro": {
+    "message": "Romanian",
+    "description": "Label used to describe senses whose source language is 'ro' (Romanian)"
+  },
+  "lang_label_ru": {
+    "message": "Russian",
+    "description": "Label used to describe senses whose source language is 'ru' (Russian)"
+  },
+  "lang_label_sa": {
+    "message": "Sanskrit",
+    "description": "Label used to describe senses whose source language is 'sa' (Sanskrit)"
+  },
+  "lang_label_sk": {
+    "message": "Slovak",
+    "description": "Label used to describe senses whose source language is 'sk' (Slovak)"
+  },
+  "lang_label_sl": {
+    "message": "Slovenian",
+    "description": "Label used to describe senses whose source language is 'sl' (Slovenian)"
+  },
+  "lang_label_so": {
+    "message": "Somali",
+    "description": "Label used to describe senses whose source language is 'so' (Somali)"
+  },
+  "lang_label_sv": {
+    "message": "Swedish",
+    "description": "Label used to describe senses whose source language is 'sv' (Swedish)"
+  },
+  "lang_label_sw": {
+    "message": "Swahili",
+    "description": "Label used to describe senses whose source language is 'sw' (Swahili)"
+  },
+  "lang_label_ta": {
+    "message": "Tamil",
+    "description": "Label used to describe senses whose source language is 'ta' (Tamil)"
+  },
+  "lang_label_th": {
+    "message": "Thai",
+    "description": "Label used to describe senses whose source language is 'th' (Thai)"
+  },
+  "lang_label_tr": {
+    "message": "Turkish",
+    "description": "Label used to describe senses whose source language is 'tr' (Turkish)"
+  },
+  "lang_label_ty": {
+    "message": "Tahitian",
+    "description": "Label used to describe senses whose source language is 'ty' (Tahitian)"
+  },
+  "lang_label_ur": {
+    "message": "Urdu",
+    "description": "Label used to describe senses whose source language is 'ur' (Urdu)"
+  },
+  "lang_label_vi": {
+    "message": "Vietnamese",
+    "description": "Label used to describe senses whose source language is 'vi' (Vietnamese)"
+  },
+  "lang_label_wasei": {
+    "message": "wasei",
+    "description": "Label used to describe senses that are Japanese constructions (of English, presumably, as opposed to wasei kango)"
+  },
+  "lang_label_yi": {
+    "message": "Yiddish",
+    "description": "Label used to describe senses whose source language is 'yi' (Yiddish)"
+  },
+  "lang_label_zh": {
+    "message": "Chinese",
+    "description": "Label used to describe senses whose source language is 'zh' (Chinese)"
+  },
+  "lang_tag": {
+    "message": "en",
+    "description": "The BCP-47 compatible language code used to tag content from this localization"
+  },
+  "menu_enable_extension": {
+    "message": "Enable Rikaichamp",
+    "description": "Context menu item to enable the extension."
+  },
+  "misc_label_abbr": {
+    "message": "abbrev.",
+    "description": "Label used to describe senses with the 'abbr' (abbrev.) annotation"
+  },
+  "misc_label_arch": {
+    "message": "archaism",
+    "description": "Label used to describe senses with the 'arch' (archaism) annotation"
+  },
+  "misc_label_chn": {
+    "message": "children",
+    "description": "Label used to describe senses with the 'chn' (children) annotation"
+  },
+  "misc_label_col": {
+    "message": "colloquialism",
+    "description": "Label used to describe senses with the 'col' (colloquialism) annotation"
+  },
+  "misc_label_company": {
+    "message": "company",
+    "description": "Label used to describe senses with the 'company' (company) annotation"
+  },
+  "misc_label_dated": {
+    "message": "dated",
+    "description": "Label used to describe senses with the 'dated' (dated) annotation"
+  },
+  "misc_label_derog": {
+    "message": "derogatory",
+    "description": "Label used to describe senses with the 'derog' (derogatory) annotation"
+  },
+  "misc_label_fam": {
+    "message": "familiar",
+    "description": "Label used to describe senses with the 'fam' (familiar) annotation"
+  },
+  "misc_label_fem": {
+    "message": "female term",
+    "description": "Label used to describe senses with the 'fem' (female term) annotation"
+  },
+  "misc_label_given": {
+    "message": "given name",
+    "description": "Label used to describe senses with the 'given' (given name) annotation"
+  },
+  "misc_label_hist": {
+    "message": "historical",
+    "description": "Label used to describe senses with the 'hist' (historical) annotation"
+  },
+  "misc_label_hon": {
+    "message": "honorific",
+    "description": "Label used to describe senses with the 'hon' (honorific) annotation"
+  },
+  "misc_label_hum": {
+    "message": "humble",
+    "description": "Label used to describe senses with the 'hum' (humble) annotation"
+  },
+  "misc_label_id": {
+    "message": "idiomatic",
+    "description": "Label used to describe senses with the 'id' (idiomatic) annotation"
+  },
+  "misc_label_joc": {
+    "message": "jocular",
+    "description": "Label used to describe senses with the 'joc' (jocular) annotation"
+  },
+  "misc_label_litf": {
+    "message": "literary",
+    "description": "Label used to describe senses with the 'litf' (literary) annotation"
+  },
+  "misc_label_m_sl": {
+    "message": "manga slang",
+    "description": "Label used to describe senses with the 'm-sl' (manga slang) annotation"
+  },
+  "misc_label_male": {
+    "message": "male",
+    "description": "Label used to describe senses with the 'male' (male) annotation"
+  },
+  "misc_label_net_sl": {
+    "message": "Internet slang",
+    "description": "Label used to describe senses with the 'net-sl' (Internet slang) annotation"
+  },
+  "misc_label_obs": {
+    "message": "obsolete",
+    "description": "Label used to describe senses with the 'obs' (obsolete) annotation"
+  },
+  "misc_label_obsc": {
+    "message": "obscure",
+    "description": "Label used to describe senses with the 'obsc' (obscure) annotation"
+  },
+  "misc_label_on_mim": {
+    "message": "onomatopoeia",
+    "description": "Label used to describe senses with the 'on-mim' (onomatopoeia) annotation"
+  },
+  "misc_label_organization": {
+    "message": "org.",
+    "description": "Label used to describe senses with the 'organization' (org.) annotation"
+  },
+  "misc_label_person": {
+    "message": "person",
+    "description": "Label used to describe senses with the 'person' (person) annotation"
+  },
+  "misc_label_place": {
+    "message": "place",
+    "description": "Label used to describe senses with the 'place' (place) annotation"
+  },
+  "misc_label_poet": {
+    "message": "poetical",
+    "description": "Label used to describe senses with the 'poet' (poetical) annotation"
+  },
+  "misc_label_pol": {
+    "message": "polite",
+    "description": "Label used to describe senses with the 'pol' (polite) annotation"
+  },
+  "misc_label_product": {
+    "message": "product",
+    "description": "Label used to describe senses with the 'product' (product) annotation"
+  },
+  "misc_label_proverb": {
+    "message": "proverb",
+    "description": "Label used to describe senses with the 'proverb' (proverb) annotation"
+  },
+  "misc_label_quote": {
+    "message": "quote",
+    "description": "Label used to describe senses with the 'quote' (quote) annotation"
+  },
+  "misc_label_rare": {
+    "message": "rare",
+    "description": "Label used to describe senses with the 'rare' (rare) annotation"
+  },
+  "misc_label_sens": {
+    "message": "sensitive",
+    "description": "Label used to describe senses with the 'sens' (sensitive) annotation"
+  },
+  "misc_label_sl": {
+    "message": "slang",
+    "description": "Label used to describe senses with the 'sl' (slang) annotation"
+  },
+  "misc_label_station": {
+    "message": "station",
+    "description": "Label used to describe senses with the 'station' (station) annotation"
+  },
+  "misc_label_surname": {
+    "message": "surname",
+    "description": "Label used to describe senses with the 'surname' (surname) annotation"
+  },
+  "misc_label_uk": {
+    "message": "usually kana",
+    "description": "Label used to describe senses with the 'uk' (usually kana) annotation"
+  },
+  "misc_label_unclass": {
+    "message": "unclassified",
+    "description": "Label used to describe senses with the 'unclass' (unclassified) annotation"
+  },
+  "misc_label_vulg": {
+    "message": "vulgar",
+    "description": "Label used to describe senses with the 'vulg' (vulgar) annotation"
+  },
+  "misc_label_work": {
+    "message": "work",
+    "description": "Label used to describe senses with the 'work' (work) annotation"
+  },
+  "misc_label_X": {
+    "message": "X-rated",
+    "description": "Label used to describe senses with the 'X' (X-rated) annotation"
+  },
+  "misc_label_yoji": {
+    "message": "yojijukugo",
+    "description": "Label used to describe senses with the 'yoji' (yojijukugo) annotation"
+  },
+  "options_accent_data_source": {
+    "message": "The pitch accent data was provided by Uros Ozvatic through his free database.",
+    "description": "Attribution for pitch accent data as described here: https://github.com/mifunetoshiro/kanjium"
+  },
+  "options_accent_display_binary": {
+    "message": "Binary pitch ⎾⏋",
+    "description": "Label for displaying the pitch accent using box outlines to show high and low"
+  },
+  "options_accent_display_downstep": {
+    "message": "Downstep ꜜ",
+    "description": "Label for displaying the pitch accent down-step as a small downward arrow ꜜ"
+  },
+  "options_accent_display_label": {
+    "message": "Pitch accent display",
+    "description": "Label for the drop-down list used to configure how pitch accent information is displayed"
+  },
+  "options_accent_display_none": {
+    "message": "None",
+    "description": "Label for not showing pitch accent information"
+  },
+  "options_bushu_data_name": {
+    "message": "radical data",
+    "description": "The name for the bushu database data set"
+  },
+  "options_cancel_update_button_label": {
+    "message": "Cancel",
+    "description": "Label for the button to cancel a database update"
+  },
+  "options_checking_for_updates": {
+    "message": "Checking for updates…",
+    "description": "Label while we are checking for updates"
+  },
+  "options_data_series_date_only": {
+    "message": "Based on $source$ from $generated$.",
+    "placeholders": {
+      "source": {
+        "content": "$1",
+        "example": "KANJIDIC"
+      },
+      "generated": {
+        "content": "$2",
+        "example": "2019-10-19"
+      }
+    }
+  },
+  "options_data_series_version_and_date": {
+    "message": "Based on $source$ $version$ from $generated$.",
+    "placeholders": {
+      "source": {
+        "content": "$1",
+        "example": "KANJIDIC"
+      },
+      "version": {
+        "content": "$2",
+        "example": "2019-282"
+      },
+      "generated": {
+        "content": "$3",
+        "example": "2019-10-19"
+      }
+    }
+  },
+  "options_data_source": {
+    "message": "Includes data from KANJIDIC and JMnedict/ENAMDICT.",
+    "description": "Attribute of source data. Both the strings 'KANJIDIC' and 'JMnedict/ENAMDICT' must appear so that they can be link-ified to the corresponding project home pages."
+  },
+  "options_database_unavailable": {
+    "message": "Database storage unavailable",
+    "description": "Label when IndexedDB is unusable"
+  },
+  "options_db_update_error": {
+    "message": "Update failed: $errormessage$",
+    "description": "Label when we failed to update the data for some reason",
+    "placeholders": {
+      "errormessage": {
+        "content": "$1",
+        "example": "Version file not found"
+      }
+    }
+  },
+  "options_db_update_next_retry": {
+    "message": "Retrying at $nextretry$",
+    "description": "Label used when there is a scheduled retry",
+    "placeholders": {
+      "nextretry": {
+        "content": "$1",
+        "example": "2019-10-14 17:44"
+      }
+    }
+  },
+  "options_db_update_quota_error": {
+    "message": "Not enough disk space to update database (est. $quota$ available)",
+    "description": "Label when we failed to update the data for some reason",
+    "placeholders": {
+      "quota": {
+        "content": "$1",
+        "example": "The amount of disk space available, formatted as a file size."
+      }
+    }
+  },
+  "options_dictionary_data_heading": {
+    "message": "Dictionary data"
+  },
+  "options_dictionary_language_heading": {
+    "message": "Dictionary language"
+  },
+  "options_downloading_data": {
+    "message": "Downloading $datatype$ version $version$ ($progress$%)…",
+    "description": "Label while we are downloading updates",
+    "placeholders": {
+      "datatype": {
+        "content": "$1",
+        "example": "kanji data"
+      },
+      "version": {
+        "content": "$2",
+        "example": "1.0.3"
+      },
+      "progress": {
+        "content": "$3",
+        "example": "60"
+      }
+    }
+  },
+  "options_edrdg_license": {
+    "message": " This data is the property of the Electronic Dictionary Research and Development Group, and is used in conformance with the Group's licence.",
+    "description": "Description of license terms. The keywords 'Electronic Dictionary Research and Development Group' and options_edrdg_license_keyword must appear so they can be linkified. IT SHOULD BEGIN WITH APPROPRIATE SPACE IN LANGUAGES THAT SEPARATE SENTENCES WITH WHITESPACE."
+  },
+  "options_edrdg_license_keyword": {
+    "message": "licence",
+    "description": "The keyword in options_edrdg_license to link to the license"
+  },
+  "options_general_heading": {
+    "message": "General",
+    "description": "Heading for common preferences."
+  },
+  "options_highlight_matched_text": {
+    "message": "Highlight matched text"
+  },
+  "options_hold_to_show_keys_description": {
+    "message": "Hold to show popup",
+    "description": "Typically Rikaichamp shows the popup whenever it is active, but if these keys are configured the popup while only show while they are held down"
+  },
+  "options_hold_to_show_keys_explanation": {
+    "message": "The popup will only be shown while these keys are held down. If no keys are selected, the popup will be displayed whenever Rikaichamp is enabled.",
+    "description": "This is supplementary explanation to options_hold_to_show_keys_explanation"
+  },
+  "options_kanji_components": {
+    "message": "Kanji components",
+    "description": "Option to define if radicals are displayed or not"
+  },
+  "options_kanji_data_name": {
+    "message": "kanji data",
+    "description": "The name for the kanji database data set"
+  },
+  "options_kanji_data_title": {
+    "message": "Kanji data v$version$",
+    "description": "The kanji data series title and version",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "2.0.0"
+      }
+    }
+  },
+  "options_kanji_dictionary_heading": {
+    "message": "Kanji dictionary",
+    "description": "Heading for options to configure what information is displayed from the kanji dictionary"
+  },
+  "options_keyboard_heading": {
+    "message": "Keyboard",
+    "description": "Heading for options to configure keyboard commands"
+  },
+  "options_last_database_check": {
+    "message": "Last check $lastcheck$",
+    "description": "Status to show when we last checked for an update",
+    "placeholders": {
+      "lastcheck": {
+        "content": "$1",
+        "example": "2019-10-12"
+      }
+    }
+  },
+  "options_name_data_name": {
+    "message": "name data",
+    "description": "The name for the name database data set"
+  },
+  "options_name_data_title": {
+    "message": "Name data v$version$",
+    "description": "The name data series title and version",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "2.0.0"
+      }
+    }
+  },
+  "options_no_database": {
+    "message": "No database",
+    "description": "Label when the database has not yet been downloaded"
+  },
+  "options_offline_explanation": {
+    "message": "Could not check for updates because this device is currently offline. An update will be performed once the device is online.",
+    "description": "Message shown when the system is offline so updates cannot be performed"
+  },
+  "options_popup_copy_entry": {
+    "message": "Copy entry"
+  },
+  "options_popup_copy_fields": {
+    "message": "Copy tab-separated fields"
+  },
+  "options_popup_copy_next": {
+    "message": "Highlight next entry"
+  },
+  "options_popup_copy_word_kanji": {
+    "message": "Copy word or kanji"
+  },
+  "options_popup_keys_subheading": {
+    "message": "Popup keys"
+  },
+  "options_popup_start_copy": {
+    "message": "Enter copy mode"
+  },
+  "options_popup_style_heading": {
+    "message": "Popup style",
+    "description": "Heading for options to configure popup display"
+  },
+  "options_popup_switch_dictionaries": {
+    "message": "Switch dictionaries"
+  },
+  "options_popup_toggle_definition": {
+    "message": "Toggle definition"
+  },
+  "options_pos_display_code": {
+    "message": "Code (e.g. “v5r”)",
+    "description": "Label for simply displaying dictionary part-of-speech codes"
+  },
+  "options_pos_display_expl": {
+    "message": "Explanation (e.g. “-ru Godan/u-verb”)",
+    "description": "Label for configuring short explanations to be shown for part-of-speech. The \"-ru Godan/u-verb\" example should correspond to the localized value of pos_label_v5r."
+  },
+  "options_pos_display_label": {
+    "message": "Part of speech display",
+    "description": "Label for the drop-down list used to configure how part-of-speech tags are displayed"
+  },
+  "options_pos_display_none": {
+    "message": "None",
+    "description": "Label for hiding part-of-speech labels"
+  },
+  "options_show_context_menu_item": {
+    "message": "Show “Enable Rikaichamp” in context menu",
+    "description": "Option to enable context menu item with label `menu_enable_extension`"
+  },
+  "options_show_definitions": {
+    "message": "Show definitions"
+  },
+  "options_show_priority": {
+    "message": "Show indicators next to common (★) and somewhat common (☆) words",
+    "description": "Label for enabling the ★ and ☆ markers next to dictionary headwords to indicate they occur frequently  or somewhat frequently respectively"
+  },
+  "options_show_romaji": {
+    "message": "Show romaji"
+  },
+  "options_update_check_button_label": {
+    "message": "Check for updates",
+    "description": "Label for the button to check for database updates"
+  },
+  "options_update_retry_button_label": {
+    "message": "Retry",
+    "description": "Label for the button to retry the database update after a failure"
+  },
+  "options_updating_data": {
+    "message": "Updating $datatype$ to version $version$ ($progress$%)…",
+    "description": "Label while we are applying updates",
+    "placeholders": {
+      "datatype": {
+        "content": "$1",
+        "example": "kanji data"
+      },
+      "version": {
+        "content": "$2",
+        "example": "1.0.3"
+      },
+      "progress": {
+        "content": "$3",
+        "example": "60"
+      }
+    }
+  },
+  "options_warning_language_is_kanji_only": {
+    "message": "This setting currently only applies to the kanji dictionary."
+  },
+  "pos_label_adj_f": {
+    "message": "pre-noun adj.",
+    "description": "Short part-of-speech label shown next to noun or verb entries acting prenominally"
+  },
+  "pos_label_adj_i": {
+    "message": "i adj.",
+    "description": "Short part-of-speech label shown next to adjective (keiyoushi) entries"
+  },
+  "pos_label_adj_ix": {
+    "message": "ii/yoi adj.",
+    "description": "Short part-of-speech label shown next to adjective (keiyoushi) - yoi/ii class entries"
+  },
+  "pos_label_adj_kari": {
+    "message": "kari adj.",
+    "description": "Short part-of-speech label shown next to 'kari' adjective (archaic) entries"
+  },
+  "pos_label_adj_ku": {
+    "message": "ku adj.",
+    "description": "Short part-of-speech label shown next to 'ku' adjective (archaic) entries"
+  },
+  "pos_label_adj_na": {
+    "message": "na adj.",
+    "description": "Short part-of-speech label shown next to adjectival nouns or quasi-adjectives (keiyodoshi) entries"
+  },
+  "pos_label_adj_nari": {
+    "message": "nari adj.",
+    "description": "Short part-of-speech label shown next to archaic/formal form of na-adjective entries"
+  },
+  "pos_label_adj_no": {
+    "message": "no-adj.",
+    "description": "Short part-of-speech label shown next to nouns which may take the genitive case particle 'no' entries"
+  },
+  "pos_label_adj_pn": {
+    "message": "pre-noun adj.",
+    "description": "Short part-of-speech label shown next to pre-noun adjectival (rentaishi) entries"
+  },
+  "pos_label_adj_shiku": {
+    "message": "shiku adj.",
+    "description": "Short part-of-speech label shown next to 'shiku' adjective (archaic) entries"
+  },
+  "pos_label_adj_t": {
+    "message": "taru adj.",
+    "description": "Short part-of-speech label shown next to 'taru' adjective entries"
+  },
+  "pos_label_adv": {
+    "message": "adverb",
+    "description": "Short part-of-speech label shown next to adverb (fukushi) entries"
+  },
+  "pos_label_adv_to": {
+    "message": "adverb to",
+    "description": "Short part-of-speech label shown next to adverb taking the 'to' particle entries"
+  },
+  "pos_label_aux": {
+    "message": "aux.",
+    "description": "Short part-of-speech label shown next to auxiliary entries"
+  },
+  "pos_label_aux_adj": {
+    "message": "aux. adj.",
+    "description": "Short part-of-speech label shown next to auxiliary adjective entries"
+  },
+  "pos_label_aux_v": {
+    "message": "aux. verb",
+    "description": "Short part-of-speech label shown next to auxiliary verb entries"
+  },
+  "pos_label_conj": {
+    "message": "conj.",
+    "description": "Short part-of-speech label shown next to conjunction entries"
+  },
+  "pos_label_cop": {
+    "message": "copula",
+    "description": "Short part-of-speech label shown next to copula entries"
+  },
+  "pos_label_ctr": {
+    "message": "counter",
+    "description": "Short part-of-speech label shown next to counter entries"
+  },
+  "pos_label_exp": {
+    "message": "exp.",
+    "description": "Short part-of-speech label shown next to expressions (phrases, clauses, etc.) entries"
+  },
+  "pos_label_int": {
+    "message": "int.",
+    "description": "Short part-of-speech label shown next to interjection (kandoushi) entries"
+  },
+  "pos_label_n": {
+    "message": "noun",
+    "description": "Short part-of-speech label shown next to noun (common) (futsuumeishi) entries"
+  },
+  "pos_label_n_adv": {
+    "message": "adv. noun",
+    "description": "Short part-of-speech label shown next to adverbial noun (fukushitekimeishi) entries"
+  },
+  "pos_label_n_pr": {
+    "message": "proper noun",
+    "description": "Short part-of-speech label shown next to proper noun entries"
+  },
+  "pos_label_n_pref": {
+    "message": "n-pref",
+    "description": "Short part-of-speech label shown next to noun, used as a prefix entries"
+  },
+  "pos_label_n_suf": {
+    "message": "n-suf",
+    "description": "Short part-of-speech label shown next to noun, used as a suffix entries"
+  },
+  "pos_label_n_t": {
+    "message": "n-temp",
+    "description": "Short part-of-speech label shown next to noun (temporal) (jisoumeishi) entries"
+  },
+  "pos_label_num": {
+    "message": "numeric",
+    "description": "Short part-of-speech label shown next to numeric entries"
+  },
+  "pos_label_pn": {
+    "message": "pronoun",
+    "description": "Short part-of-speech label shown next to pronoun entries"
+  },
+  "pos_label_pref": {
+    "message": "prefix",
+    "description": "Short part-of-speech label shown next to prefix entries"
+  },
+  "pos_label_prt": {
+    "message": "particle",
+    "description": "Short part-of-speech label shown next to particle entries"
+  },
+  "pos_label_suf": {
+    "message": "suffix",
+    "description": "Short part-of-speech label shown next to suffix entries"
+  },
+  "pos_label_unc": {
+    "message": "?",
+    "description": "Short part-of-speech label shown next to unclassified entries"
+  },
+  "pos_label_v_unspec": {
+    "message": "verb",
+    "description": "Short part-of-speech label shown next to verb unspecified entries"
+  },
+  "pos_label_v1": {
+    "message": "Ichidan/ru-verb",
+    "description": "Short part-of-speech label shown next to Ichidan verb entries"
+  },
+  "pos_label_v1_s": {
+    "message": "Ichidan/ru-verb (kureru)",
+    "description": "Short part-of-speech label shown next to Ichidan verb - kureru special class entries"
+  },
+  "pos_label_v2a_s": {
+    "message": "-u Nidan verb",
+    "description": "Short part-of-speech label shown next to Nidan verb with 'u' ending (archaic) entries"
+  },
+  "pos_label_v2b_k": {
+    "message": "-bu upper Nidan verb",
+    "description": "Short part-of-speech label shown next to Nidan verb (upper class) with 'bu' ending (archaic) entries"
+  },
+  "pos_label_v2b_s": {
+    "message": "-bu lower Nidan verb",
+    "description": "Short part-of-speech label shown next to Nidan verb (lower class) with 'bu' ending (archaic) entries"
+  },
+  "pos_label_v2d_k": {
+    "message": "-dzu upper Nidan verb",
+    "description": "Short part-of-speech label shown next to Nidan verb (upper class) with 'dzu' ending (archaic) entries"
+  },
+  "pos_label_v2d_s": {
+    "message": "-dzu lower Nidan verb",
+    "description": "Short part-of-speech label shown next to Nidan verb (lower class) with 'dzu' ending (archaic) entries"
+  },
+  "pos_label_v2g_k": {
+    "message": "-gu upper Nidan verb",
+    "description": "Short part-of-speech label shown next to Nidan verb (upper class) with 'gu' ending (archaic) entries"
+  },
+  "pos_label_v2g_s": {
+    "message": "-gu lower Nidan verb",
+    "description": "Short part-of-speech label shown next to Nidan verb (lower class) with 'gu' ending (archaic) entries"
+  },
+  "pos_label_v2h_k": {
+    "message": "-hu/-fu upper Nidan verb",
+    "description": "Short part-of-speech label shown next to Nidan verb (upper class) with 'hu/fu' ending (archaic) entries"
+  },
+  "pos_label_v2h_s": {
+    "message": "-hu/-fu lower Nidan verb",
+    "description": "Short part-of-speech label shown next to Nidan verb (lower class) with 'hu/fu' ending (archaic) entries"
+  },
+  "pos_label_v2k_k": {
+    "message": "-ku upper Nidan verb",
+    "description": "Short part-of-speech label shown next to Nidan verb (upper class) with 'ku' ending (archaic) entries"
+  },
+  "pos_label_v2k_s": {
+    "message": "-ku lower Nidan verb",
+    "description": "Short part-of-speech label shown next to Nidan verb (lower class) with 'ku' ending (archaic) entries"
+  },
+  "pos_label_v2m_k": {
+    "message": "-mu upper Nidan verb",
+    "description": "Short part-of-speech label shown next to Nidan verb (upper class) with 'mu' ending (archaic) entries"
+  },
+  "pos_label_v2m_s": {
+    "message": "-mu lower Nidan verb",
+    "description": "Short part-of-speech label shown next to Nidan verb (lower class) with 'mu' ending (archaic) entries"
+  },
+  "pos_label_v2n_s": {
+    "message": "-nu Nidan verb",
+    "description": "Short part-of-speech label shown next to Nidan verb (lower class) with 'nu' ending (archaic) entries"
+  },
+  "pos_label_v2r_k": {
+    "message": "-ru upper Nidan verb",
+    "description": "Short part-of-speech label shown next to Nidan verb (upper class) with 'ru' ending (archaic) entries"
+  },
+  "pos_label_v2r_s": {
+    "message": "-ru lower Nidan verb",
+    "description": "Short part-of-speech label shown next to Nidan verb (lower class) with 'ru' ending (archaic) entries"
+  },
+  "pos_label_v2s_s": {
+    "message": "-su Nidan verb",
+    "description": "Short part-of-speech label shown next to Nidan verb (lower class) with 'su' ending (archaic) entries"
+  },
+  "pos_label_v2t_k": {
+    "message": "-tsu upper Nidan verb",
+    "description": "Short part-of-speech label shown next to Nidan verb (upper class) with 'tsu' ending (archaic) entries"
+  },
+  "pos_label_v2t_s": {
+    "message": "-tsu upper Nidan verb",
+    "description": "Short part-of-speech label shown next to Nidan verb (lower class) with 'tsu' ending (archaic) entries"
+  },
+  "pos_label_v2w_s": {
+    "message": "-u Nidan verb + we",
+    "description": "Short part-of-speech label shown next to Nidan verb (lower class) with 'u' ending and 'we' conjugation (archaic) entries"
+  },
+  "pos_label_v2y_k": {
+    "message": "-yu upper Nidan verb",
+    "description": "Short part-of-speech label shown next to Nidan verb (upper class) with 'yu' ending (archaic) entries"
+  },
+  "pos_label_v2y_s": {
+    "message": "-yu lower Nidan verb",
+    "description": "Short part-of-speech label shown next to Nidan verb (lower class) with 'yu' ending (archaic) entries"
+  },
+  "pos_label_v2z_s": {
+    "message": "-zu Nidan verb",
+    "description": "Short part-of-speech label shown next to Nidan verb (lower class) with 'zu' ending (archaic) entries"
+  },
+  "pos_label_v4b": {
+    "message": "-bu Yodan verb",
+    "description": "Short part-of-speech label shown next to Yodan verb with 'bu' ending (archaic) entries"
+  },
+  "pos_label_v4g": {
+    "message": "-gu Yodan verb",
+    "description": "Short part-of-speech label shown next to Yodan verb with 'gu' ending (archaic) entries"
+  },
+  "pos_label_v4h": {
+    "message": "-hu/-fu Yodan verb",
+    "description": "Short part-of-speech label shown next to Yodan verb with 'hu/fu' ending (archaic) entries"
+  },
+  "pos_label_v4k": {
+    "message": "-ku Yodan verb",
+    "description": "Short part-of-speech label shown next to Yodan verb with 'ku' ending (archaic) entries"
+  },
+  "pos_label_v4m": {
+    "message": "-mu Yodan verb",
+    "description": "Short part-of-speech label shown next to Yodan verb with 'mu' ending (archaic) entries"
+  },
+  "pos_label_v4n": {
+    "message": "-nu Yodan verb",
+    "description": "Short part-of-speech label shown next to Yodan verb with 'nu' ending (archaic) entries"
+  },
+  "pos_label_v4r": {
+    "message": "-ru Yodan verb",
+    "description": "Short part-of-speech label shown next to Yodan verb with 'ru' ending (archaic) entries"
+  },
+  "pos_label_v4s": {
+    "message": "-su Yodan verb",
+    "description": "Short part-of-speech label shown next to Yodan verb with 'su' ending (archaic) entries"
+  },
+  "pos_label_v4t": {
+    "message": "-tsu Yodan verb",
+    "description": "Short part-of-speech label shown next to Yodan verb with 'tsu' ending (archaic) entries"
+  },
+  "pos_label_v5aru": {
+    "message": "-aru godan verb",
+    "description": "Short part-of-speech label shown next to Godan verb - -aru special class entries"
+  },
+  "pos_label_v5b": {
+    "message": "-bu Godan/u-verb",
+    "description": "Short part-of-speech label shown next to Godan verb with 'bu' ending entries"
+  },
+  "pos_label_v5g": {
+    "message": "-gu Godan/u-verb",
+    "description": "Short part-of-speech label shown next to Godan verb with 'gu' ending entries"
+  },
+  "pos_label_v5k": {
+    "message": "-ku Godan/u-verb",
+    "description": "Short part-of-speech label shown next to Godan verb with 'ku' ending entries"
+  },
+  "pos_label_v5k_s": {
+    "message": "iku/yuku Godan/u-verb",
+    "description": "Short part-of-speech label shown next to Godan verb - Iku/Yuku special class entries"
+  },
+  "pos_label_v5m": {
+    "message": "-mu Godan/u-verb",
+    "description": "Short part-of-speech label shown next to Godan verb with 'mu' ending entries"
+  },
+  "pos_label_v5n": {
+    "message": "-nu Godan/u-verb",
+    "description": "Short part-of-speech label shown next to Godan verb with 'nu' ending entries"
+  },
+  "pos_label_v5r": {
+    "message": "-ru Godan/u-verb",
+    "description": "Short part-of-speech label shown next to Godan verb with 'ru' ending entries"
+  },
+  "pos_label_v5r_i": {
+    "message": "-ru Godan/u-verb (irr.)",
+    "description": "Short part-of-speech label shown next to Godan verb with 'ru' ending (irregular verb) entries"
+  },
+  "pos_label_v5s": {
+    "message": "-su Godan/u-verb",
+    "description": "Short part-of-speech label shown next to Godan verb with 'su' ending entries"
+  },
+  "pos_label_v5t": {
+    "message": "-tsu Godan/u-verb",
+    "description": "Short part-of-speech label shown next to Godan verb with 'tsu' ending entries"
+  },
+  "pos_label_v5u": {
+    "message": "-u Godan/u-verb",
+    "description": "Short part-of-speech label shown next to Godan verb with 'u' ending entries"
+  },
+  "pos_label_v5u_s": {
+    "message": "-u Godan/u-verb (special)",
+    "description": "Short part-of-speech label shown next to Godan verb with 'u' ending (special class) entries"
+  },
+  "pos_label_v5uru": {
+    "message": "-uru Godan/u-verb",
+    "description": "Short part-of-speech label shown next to Godan verb - Uru old class verb (old form of Eru) entries"
+  },
+  "pos_label_vi": {
+    "message": "intrans.",
+    "description": "Short part-of-speech label shown next to intransitive verb entries"
+  },
+  "pos_label_vk": {
+    "message": "kuru verb",
+    "description": "Short part-of-speech label shown next to Kuru verb - special class entries"
+  },
+  "pos_label_vn": {
+    "message": "-nu irr. verb",
+    "description": "Short part-of-speech label shown next to irregular nu verb entries"
+  },
+  "pos_label_vr": {
+    "message": "-ru (-ri) irr. verb",
+    "description": "Short part-of-speech label shown next to irregular ru verb, plain form ends with -ri entries"
+  },
+  "pos_label_vs": {
+    "message": "+suru verb",
+    "description": "Short part-of-speech label shown next to noun or participle which takes the aux. verb suru entries"
+  },
+  "pos_label_vs_c": {
+    "message": "-su(ru) verb",
+    "description": "Short part-of-speech label shown next to su verb - precursor to the modern suru entries"
+  },
+  "pos_label_vs_i": {
+    "message": "-suru verb",
+    "description": "Short part-of-speech label shown next to suru verb - included entries"
+  },
+  "pos_label_vs_s": {
+    "message": "-suru verb (special)",
+    "description": "Short part-of-speech label shown next to suru verb - special class entries"
+  },
+  "pos_label_vt": {
+    "message": "trans.",
+    "description": "Short part-of-speech label shown next to transitive verb entries"
+  },
+  "pos_label_vz": {
+    "message": "-zuru Ichidan/ru-verb",
+    "description": "Short part-of-speech label shown next to Ichidan verb - zuru verb (alternative form of -jiru verbs) entries"
+  },
+  "ref_label_jlpt": {
+    "message": "JLPT",
+    "description": "The label used when presenting the level the kanji appears in in the old JLPT system"
+  },
+  "ref_label_kk": {
+    "message": "Kanji Kentei",
+    "description": "The label used when presenting Kanji Kentei levels"
+  },
+  "ref_label_nelson_r": {
+    "message": "Radical (Nelson)",
+    "description": "The label used when presenting Nelson's revised radical numbers. This should generally be a label that will sort directly after ref_label_radical when using String.localCompare."
+  },
+  "ref_label_py": {
+    "message": "Pinyin",
+    "description": "The label used when present the Pinyin reading"
+  },
+  "ref_label_radical": {
+    "message": "Radical",
+    "description": "The label used when presenting radical numbers"
+  },
+  "ref_label_unicode": {
+    "message": "Unicode",
+    "description": "The label used when presenting the Unicode codepoint of the kanji"
+  }
+}

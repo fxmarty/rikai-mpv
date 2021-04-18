@@ -1,0 +1,18 @@
+{
+  "name": "rikaichamp-backend",
+  "type": "module",
+  "devDependencies": {
+    "ts-node": "^9.1.1"
+  },
+  "dependencies": {
+    "@types/i18next-fs-backend": "^1.0.0",
+    "@types/jsdom": "^16.2.10",
+    "@types/node": "^14.14.34",
+    "@types/split2": "^2.1.6",
+    "i18next": "^19.9.2",
+    "i18next-fs-backend": "^1.1.0",
+    "jsdom": "^16.5.2",
+    "split2": "^3.2.2",
+    "typescript": "^4.1.3"
+  }
+}
