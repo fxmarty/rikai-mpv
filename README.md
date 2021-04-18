@@ -5,7 +5,7 @@ rikai-mpv is a port of rikaichamp Japanese dictionary and parser into [mpv video
 As for the graphical part, it takes inspiration from [interSubs](https://github.com/oltodosel/interSubs) script but has been completly rewritten for the Python side. 
 
 
-https://user-images.githubusercontent.com/9808326/115159738-e1dea180-a094-11eb-84ab-4ade3e931785.mp4
+https://user-images.githubusercontent.com/9808326/115159800-2d914b00-a095-11eb-81cc-18a63eff74e7.mp4
 
 
 ## Dependencies
