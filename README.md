@@ -1,6 +1,6 @@
 ## About rikai-mpv
 
-rikai-mpv is a port of rikaichamp Japanese dictionary and parser into [mpv video player](https://github.com/mpv-player/mpv).
+rikai-mpv is a port of [rikaichamp](https://github.com/birtles/rikaichamp) Japanese dictionary and parser into [mpv](https://github.com/mpv-player/mpv) video player.
 
 As for the graphical part, it takes inspiration from [interSubs](https://github.com/oltodosel/interSubs) script but has been completly rewritten for the Python side. 
 
@@ -14,9 +14,13 @@ By default, rikai-mpv uses Noto Serif CJK JP Light font: https://www.google.com/
 
 Dependencies are:
 
+* Linux OS with X-based display
+* `python >=3.8.5`
 * `PyQt5`
 * `QtWebEngineWidgets` (likely installed with `pip install PyQtWebEngine`, see [here](https://stackoverflow.com/a/54947671/4370080))
 * `node >=v14.16`
+
+rikai-mpv may work with different versions, but has not been tested. A port into Windows should be doable, although we rely on Unix sockets for lua <--> python <--> node.js communication.
 
 ## Install
 
@@ -35,6 +39,19 @@ ln -s rikai-mpv/front.lua .
 ```
 
 If necessary, modify `rikai_config.py` to fit your needs. The available options are limited right now and should be expended.
+
+## Key bindings
+
+* `F5` start rikai-mpv
+* `F7` stop rikai-mpv
+* With the mouse on a subtitle, *left* click then `Ctrl + Alt + UP` / `Ctrl + Alt + DOWN` to zoom/dezoom the subtitles
+* With the mouse on a subtitle, *right* click then `Ctrl + Alt + UP` / `Ctrl + Alt + DOWN` to zoom/dezoom the popup
+
+## Important notes
+
+* rikai-mpv overrides the settings set for subtitles styling in `mpv.conf`. You may wish to edit `rikai_config.py` to fit your needs.
+* If you are using a secondary sid for subtitles, make sure it has been activated at least once before turning on rikai-mpv. It has been witnessed that the secondary sid stays hidden.
+* rikai-mpv has not been tested in a multi-screen setting, but you may find relevant infos about this case in [interSubs](https://github.com/oltodosel/interSubs) repository.
 
 ## Build
 
