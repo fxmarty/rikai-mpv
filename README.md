@@ -2,11 +2,12 @@
 
 rikai-mpv is a port of [rikaichamp](https://github.com/birtles/rikaichamp) Japanese dictionary and parser into [mpv](https://github.com/mpv-player/mpv) video player.
 
-As for the graphical part, it takes inspiration from [interSubs](https://github.com/oltodosel/interSubs) script but has been completly rewritten for the Python side. 
+As for the graphical part, it takes inspiration from [interSubs](https://github.com/oltodosel/interSubs) script but has been rewritten for the Python side. 
 
 
 https://user-images.githubusercontent.com/9808326/115159800-2d914b00-a095-11eb-81cc-18a63eff74e7.mp4
 
+Pieces of code are also borrowed from [normal-jp](https://github.com/birchill/normal-jp) and [hikibiki-data](https://github.com/birchill/hikibiki-data).
 
 ## Dependencies
 
