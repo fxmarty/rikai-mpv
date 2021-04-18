@@ -89,7 +89,7 @@ class thread_subtitles(QObject):
                     hidden = True
             inc += 1
             
-            if not hidden or True:
+            if not hidden:
                 try:
                     tmp_file_subs = open(sub_file).read()
                 except Exception:
