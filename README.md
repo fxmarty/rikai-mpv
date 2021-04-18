@@ -49,6 +49,7 @@ If necessary, modify `rikai_config.py` to fit your needs. The available options 
 
 ## Important notes
 
+* rikai-mpv is by default active **only in full screen mode**.
 * rikai-mpv overrides the settings set for subtitles styling in `mpv.conf`. You may wish to edit `rikai_config.py` to fit your needs.
 * If you are using a secondary sid for subtitles, make sure it has been activated at least once before turning on rikai-mpv. It has been witnessed that the secondary sid stays hidden.
 * rikai-mpv has not been tested in a multi-screen setting, but you may find relevant infos about this case in [interSubs](https://github.com/oltodosel/interSubs) repository.
