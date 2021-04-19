@@ -47,6 +47,7 @@ If necessary, modify `rikai_config.py` to fit your needs. The available options 
 * `F7` stop rikai-mpv
 * With the mouse on a subtitle, *left* click then `Ctrl + Alt + UP` / `Ctrl + Alt + DOWN` to zoom/dezoom the subtitles
 * With the mouse on a subtitle, *right* click then `Ctrl + Alt + UP` / `Ctrl + Alt + DOWN` to zoom/dezoom the popup
+* Popups are scrollable in case they don't fit in screen.
 
 ## Important notes
 
