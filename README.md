@@ -27,7 +27,7 @@ rikai-mpv may work with different versions, but has not been tested. A port into
 
 Currently, the script supports **Linux only**. It has not been tested for Wayland-based display and has been designed for X. You can install as follow:
 
-Clone in your `mpv/scripts` folder (the install will break elsewhere):
+Clone in your `mpv/scripts/` folder (the install will break elsewhere):
 
 ```
 cd ~/.config/mpv/scripts/
