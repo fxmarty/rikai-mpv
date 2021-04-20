@@ -49,6 +49,13 @@ If necessary, modify `rikai_config.py` to fit your needs. The available options 
 * With the mouse on a subtitle, *right* click then `Ctrl + Alt + UP` / `Ctrl + Alt + DOWN` to zoom/dezoom the popup
 * Popups are scrollable in case they don't fit in screen.
 
+On top of these bindings, mpv's built-in hotkeys for going to next/previous subtitle may prove useful:
+```
+# to add in ~/.config/mpv/input.conf
+LEFT        no-osd sub-seek -1  # previous subtitle
+RIGHT       no-osd sub-seek +1  # next subtitle
+```
+
 ## Important notes
 
 * rikai-mpv is by default active **only in full screen mode**.
