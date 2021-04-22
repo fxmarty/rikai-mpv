@@ -55,7 +55,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // TO MODIFY, INCREASE AND ADD SCROLLING
-const WORDS_MAX_ENTRIES = 3;
+const WORDS_MAX_ENTRIES = 4;
 
 export const enum WordType {
   IchidanVerb = 1 << 0, // i.e. ru-verbs

@@ -1,3 +1,39 @@
+/*
+  rikai-mpv
+  by fxmarty
+  https://github.com/fxmarty/rikai-mpv
+  ---
+  Originally based on Rikaichamp
+  by Brian Birtles
+  https://github.com/birtles/rikaichamp
+  ---
+  Originally based on Rikaikun
+  by Erek Speed
+  http://code.google.com/p/rikaikun/
+  ---
+  Originally based on Rikaichan 1.07
+  by Jonathan Zarate
+  http://www.polarcloud.com/
+  ---
+  Originally based on RikaiXUL 0.4 by Todd Rudick
+  http://www.rikai.com/
+  http://rikaixul.mozdev.org/
+  ---
+  This program is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2 of the License, or
+  (at your option) any later version.
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+  You should have received a copy of the GNU General Public License
+  along with this program; if not, write to the Free Software
+  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+  ---
+  Please do not change or remove any of the copyrights or links to web pages
+  when modifying any of the files. - Jon
+*/
 import { expandChoon, kanaToHiragana } from './jp-utilities.js';
 import { deinflect, deinflectL10NKeys } from './deinflect.js';
 import { normalizeInput } from './conversion.js';
@@ -12,7 +48,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 // TO MODIFY, INCREASE AND ADD SCROLLING
-const WORDS_MAX_ENTRIES = 3;
+const WORDS_MAX_ENTRIES = 4;
 export class WordsDictionary {
     constructor() {
         this.path_to_dict = path.join(__dirname, '..', 'data', 'words.ljson');

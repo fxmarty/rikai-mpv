@@ -12,7 +12,7 @@ from json import loads
 from PyQt5 import QtWebEngineWidgets
 from PyQt5.QtCore import Qt, QThread, QObject, QSize, QPointF
 from PyQt5.QtCore import pyqtSignal, pyqtSlot
-from PyQt5.QtCore import QUrl, QEvent, QPoint, QRect
+from PyQt5.QtCore import QUrl, QPoint, QRect
 from PyQt5.QtWidgets import QTextEdit, QFrame, QApplication
 
 from PyQt5.QtGui import QTextCursor, QFont, QPainter, QPen, QColor
@@ -27,6 +27,10 @@ import warnings
 pth = os.path.expanduser('~/.config/mpv/scripts/')
 os.chdir(pth)
 import rikai_config as config
+
+# the import below is extremely useful to debug events by printing their type
+# with `print(event_lookup[str(event.type())])`
+# from event_lookup import event_lookup
 
 
 def sign(x):
@@ -117,49 +121,44 @@ class Popup(QtWebEngineWidgets.QWebEngineView):
         self.html_path = os.path.join(os.path.expanduser('~/.config/mpv/scripts/'),
                                       'rikai-mpv/rikaichamp-backend/web_page/my_attempt.html')
         
-        self.focusProxy().installEventFilter(self)
-        
+        # used for rounding when rezooming
         self.last_round = 1
         
+        # used to keep track of zoom changes
         self.zoom_timed = 0
         
         # this record the vertical scrolling in the popup
         self.scroll_y = 0
-    
-    def eventFilter(self, obj, event):
-        # Ctrl+Alt+"+" or Ctrl+Alt+"-" for zooming
-        if event.type() == QEvent.KeyPress:
-            if ((event.modifiers() & Qt.ControlModifier)
-                    and (event.modifiers() & Qt.AltModifier)):
-                
-                proceed_zooming = False
-                if event.key() == Qt.Key_Up and self.zoom_rate < 2:
-                    proceed_zooming = True
-                    up_or_down = 1
-                    
-                if event.key() == Qt.Key_Down and self.zoom_rate > 0.3:
-                    proceed_zooming = True
-                    up_or_down = -1
-                
-                if proceed_zooming is True:
-                    self.zoom_rate = self.zoom_rate + up_or_down * 0.05
-                    self.zoom_timed = self.zoom_timed + up_or_down
-                    
-                    self.setZoomFactor(self.zoom_rate)
-                    
-                    new_width = self.width() + up_or_down * self.base_width * 0.05
-                    new_height = self.height() + up_or_down * self.base_height * 0.05
-                    
-                    new_width_int, new_height_int = self.round_up_down(new_width, new_height)
-
-                    self.move(self.pos().x(),
-                              self.pos().y() + self.height() - new_height_int)
-                    
-                    self.resize(new_width_int, new_height_int)
-                    return True
-                return False
-        return False
         
+    def change_zoom(self, event):
+        # Ctrl+Alt+"+" or Ctrl+Alt+"-" for zooming
+        if ((event.modifiers() & Qt.ControlModifier)
+                and (event.modifiers() & Qt.AltModifier)):
+            proceed_zooming = False
+            if event.key() == Qt.Key_Up and self.zoom_rate < 2:
+                proceed_zooming = True
+                up_or_down = 1
+                
+            if event.key() == Qt.Key_Down and self.zoom_rate > 0.3:
+                proceed_zooming = True
+                up_or_down = -1
+            
+            if proceed_zooming is True:
+                self.zoom_rate = self.zoom_rate + up_or_down * 0.05
+                self.zoom_timed = self.zoom_timed + up_or_down
+                
+                self.setZoomFactor(self.zoom_rate)
+                
+                new_width = self.width() + up_or_down * self.base_width * 0.05
+                new_height = self.height() + up_or_down * self.base_height * 0.05
+                
+                new_width_int, new_height_int = self.round_up_down(new_width, new_height)
+
+                self.move(self.pos().x(),
+                          self.pos().y() + self.height() - new_height_int)
+                
+                self.resize(new_width_int, new_height_int)
+    
     # this function is needed because depending on the rounding we apply and if the zoom
     # is changed many times, we may encounter unexpected position / size.
     def round_up_down(self, x, y):
@@ -231,24 +230,54 @@ class TextWidget(QTextEdit):
         
         # execution after the html of the popup has been loaded
         self.popup.loadFinished.connect(self.after_popup_loaded)
-    
+        
+        self.popup_showing_ready = True
+        
+        # set to True when a warning message to show only once has been shown
+        self.warning_message_unique_shown = False
+        
     def after_popup_loaded(self, arg):
-        if arg is True:  # just discard the case where loading has failed, but it should be investigated
-            self.popup.page().runJavaScript("document.getElementById('rikaichamp-window').scrollWidth",
-                                            self.callback_popup_width)
-            self.popup.page().runJavaScript("document.getElementById('rikaichamp-window').scrollHeight",
-                                            self.callback_popup_height)
+        self.popup.page().runJavaScript(
+                    """
+                    try {
+                    document.getElementById('rikaichamp-window').scrollWidth;
+                    }
+                    catch(err) {
+                        err.message;
+                    }
+                    """,
+                    self.callback_popup_width)
+        
+        self.popup.page().runJavaScript(
+                    """
+                    try {
+                    document.getElementById('rikaichamp-window').scrollHeight;
+                    }
+                    catch(err) {
+                        err.message;
+                    }
+                    """,
+                    self.callback_popup_height)
+    
+    def callback_popup_height(self, new_height):
+        if new_height != "Cannot read property 'scrollHeight' of null":
+            self.popup.base_height = new_height
+            
+            self.popup_showing_ready = True  # From here, we don't care about the .html file
+            
+            self.show_popup()
         else:
             warnings.warn('Popup page loading has failed and this should not happen.'
                           + ' Please fill a bug report if this gets inconvenient.',
                           stacklevel=2)
     
-    def callback_popup_height(self, new_height):
-        self.popup.base_height = new_height
-        self.show_popup()
-    
     def callback_popup_width(self, new_width):
-        self.popup.base_width = new_width
+        if new_width != "Cannot read property 'scrollHeight' of null":
+            self.popup.base_width = new_width
+        else:
+            warnings.warn('Popup page loading has failed and this should not happen.'
+                          + ' Please fill a bug report if this gets inconvenient.',
+                          stacklevel=2)
     
     def show_popup(self):
         if self.already_in:  # it could be that we exited the subtitles before getting there
@@ -293,7 +322,7 @@ class TextWidget(QTextEdit):
             self.popup.show()
             
         self.no_popup = True
-
+        
     def mouseMoveEvent(self, event):
         point_position = event.pos()  # this is relative coordinates in the QTextEdit
         char_index = self.document().documentLayout().hitTest(
@@ -346,7 +375,20 @@ class TextWidget(QTextEdit):
                 # in case it was not shown already
                 self.popup.show()
                 
-                self.popup.load(QUrl.fromLocalFile(self.popup.html_path))
+                if self.popup_showing_ready:
+                    self.popup_showing_ready = False
+                    self.popup.load(QUrl.fromLocalFile(self.popup.html_path))
+                else:
+                    # the previous .html file is still being used, which is typically
+                    # the case when the mouse moves too fast. This is really subideal and
+                    # an other solution should be found to avoid reading and writing .html
+                    # files at the same time...
+                    if not self.warning_message_unique_shown:
+                        warnings.warn('Ignore this popup showing as it is likely to fail.'
+                                      + ' Please fill a bug report if this gets inconvenient.'
+                                      + " This warning won't be shown again.",
+                                      stacklevel=2)
+                    pass
     
     def enterEvent(self, event):
         # the case where this event is triggered several times has been encountered,
@@ -379,22 +421,35 @@ class TextWidget(QTextEdit):
         super().leaveEvent(event)
     
     def mousePressEvent(self, event):
-        # we want to set focus to the popup, to likely zoom in/out the popup
+        # we want to zoom in/out the popup, but set focus to this QTextEdit because
+        # I could not redirect properly the keyPress events to the popup
         if event.button() == Qt.MouseButton.RightButton:
-            self.popup.activateWindow()
+            self.activateWindow()
+            self.setFocus()
         
         # we want to set focus to the parent frame, to likely zoom in/out the subtitles
         elif event.button() == Qt.LeftButton:
             super().mousePressEvent(event)
             self.parent.activateWindow()
             self.parent.setFocus()
+        else:
+            pass
+    
+    def keyPressEvent(self, event):  # this should handle only the popup zoom
+        self.popup.change_zoom(event)
+        super().keyPressEvent(event)
+    
+    # we do not want the context menu to display and steal focus
+    def contextMenuEvent(self, event):
+        pass
     
     def paintEvent(self, event):
         # this is just a trick to avoid an infinite loop due to the painting of the
         # outline, as the line `my_cursor.select(QTextCursor.SelectionType.Document)`
         # triggers a recursive call to `paintEvent`
         self.render_ready += 1
-        if self.render_ready > 1 and self.no_popup:
+        
+        if self.render_ready > 3 and self.no_popup:
             self.setUpdatesEnabled(False)
         
         # Showing the outline is really slow (at times, more than 100 ms) and
@@ -536,7 +591,7 @@ class ParentFrame(QFrame):
         self.subtext.pos_parent = self.pos()
         
         self.subtext.render_ready += 1
-        
+    
     def keyPressEvent(self, event):
         self.subtext.setUpdatesEnabled(True)
         
