@@ -388,6 +388,7 @@ class TextWidget(QTextEdit):
                                       + ' Please fill a bug report if this gets inconvenient.'
                                       + " This warning won't be shown again.",
                                       stacklevel=2)
+                        self.warning_message_unique_shown = True
                     pass
     
     def enterEvent(self, event):
@@ -577,7 +578,7 @@ class ParentFrame(QFrame):
         height = height_subtext + self.stretch_pixels
         
         x = (self.config.screen_width / 2) - (width / 2)
-        y = self.config.screen_height - height - 100
+        y = self.config.screen_height - height - config.bottom_spacing_pixels
         
         self.setGeometry(int(x), int(y),
                          width, height)
@@ -629,7 +630,7 @@ class ParentFrame(QFrame):
                 height = height_subtext + self.stretch_pixels
                 
                 x = (self.config.screen_width / 2) - (width / 2)
-                y = self.config.screen_height - height - 100
+                y = self.config.screen_height - height - config.bottom_spacing_pixels
                 
                 self.setGeometry(int(x), int(y),
                                  width, height)
