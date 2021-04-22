@@ -43,7 +43,7 @@ If necessary, modify `rikai_config.py` to fit your needs. The available options 
 
 ## Key bindings
 
-* `F5` start rikai-mpv
+* `F5` start rikai-mpv. Strting may take several seconds.
 * `F7` stop rikai-mpv
 * With the mouse on a subtitle, *left* click then `Ctrl + Alt + UP` / `Ctrl + Alt + DOWN` to zoom/dezoom the subtitles
 * With the mouse on a subtitle, *right* click then `Ctrl + Alt + UP` / `Ctrl + Alt + DOWN` to zoom/dezoom the popup
@@ -73,6 +73,10 @@ yarn install
 ```
 
 Modifications will be applied to rikai-mpv after compiling TypeScript into JavaScript with `tsc`, as rikai-mpv uses plain JavaScript with node.js.
+
+## Known issues
+
+Outlining text in Qt is tricky. The current solution may well break repainting of the subtitles, and a better solution is welcome if found. If repainting of subtitles is broken (e.g. only some part is showing, or it is not showing at all even though the semi-transparent background is showing), the culprit is most likely here: https://github.com/fxmarty/rikai-mpv/blob/main/subtitles_popup_graphics.py#L452
 
 ## Under the hood
 
