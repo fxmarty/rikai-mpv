@@ -17,7 +17,7 @@ Dependencies are:
 
 * Linux OS with X-based display
 * `python >=3.8.5`
-* `PyQt5`
+* `PyQt5 >=5.9.2`
 * `QtWebEngineWidgets` (likely installed with `pip install PyQtWebEngine`, see [here](https://stackoverflow.com/a/54947671/4370080))
 * `node >=v14.16`
 
