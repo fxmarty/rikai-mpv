@@ -84,14 +84,18 @@ class thread_subtitles(QObject):
         while 1:
             time.sleep(config.update_time)
             
+            
             # hide subs when mpv isn't in focus or in fullscreen
             if inc > ratio:
                 inc = 0
                 if mpv_fullscreen_status():
                     hidden = False
                 else:
-                    hidden = True
+                    if hidden is not True:  # no need to emit if already hidden
+                        hidden = True
+                        self.update_subtitles.emit(True, tmp_file_subs)
             inc += 1
+            
             
             if not hidden:
                 try:
@@ -531,7 +535,7 @@ class ParentFrame(QFrame):
     
     def render_subtitles(self, to_hide, text):
         # print("-------")
-        # print("Input:", text)
+        # print("Input: `" + text + "`")
         self.subtext.render_ready = 0
         
         if to_hide or not len(text):
@@ -552,6 +556,7 @@ class ParentFrame(QFrame):
         
         subs2 = subs2.split('\n')
         for i in range(len(subs2)):
+            subs2[i] = subs2[i].strip()
             subs2[i] = " " + subs2[i] + " "
         
         subs2 = '\n'.join(subs2)
