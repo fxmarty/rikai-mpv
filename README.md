@@ -39,7 +39,7 @@ Add a symlink at the top of the `scripts` directory for mpv to detect it:
 ln -s rikai-mpv/front.lua .
 ```
 
-If necessary, modify `rikai_config.py` to fit your needs. The available options are limited right now and should be expended.
+If necessary, modify `rikai_config.py` to fit your needs. The available options are limited right now and should be expended. In particular, if you use several screens, **set `n_screen` as a number corresponding to the screen you want the subtitles to be displayed on.**
 
 ## Key bindings
 
@@ -61,7 +61,6 @@ RIGHT       no-osd sub-seek +1  # next subtitle
 * rikai-mpv is by default active **only in full screen mode**.
 * rikai-mpv overrides the settings set for subtitles styling in `mpv.conf`. You may wish to edit `rikai_config.py` to fit your needs.
 * If you are using a secondary sid for subtitles, make sure it has been activated at least once before turning on rikai-mpv. It has been witnessed that the secondary sid stays hidden.
-* rikai-mpv has not been tested in a multi-screen setting, but you may find relevant infos about this case in [interSubs](https://github.com/oltodosel/interSubs) repository.
 * `rikai-backend` is not a complete port of rikaichamp features, as it (mainly) lacks support for automatic updates of the dictionary files and support for kanji dictionaries.
 
 ## Build
