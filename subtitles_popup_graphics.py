@@ -81,9 +81,10 @@ class thread_subtitles(QObject):
         assert check_time_fullscreen > config.update_time
         ratio = int(check_time_fullscreen / config.update_time)
         
+        tmp_file_subs = ''
+        
         while 1:
             time.sleep(config.update_time)
-            
             
             # hide subs when mpv isn't in focus or in fullscreen
             if inc > ratio:
@@ -95,7 +96,6 @@ class thread_subtitles(QObject):
                         hidden = True
                         self.update_subtitles.emit(True, tmp_file_subs)
             inc += 1
-            
             
             if not hidden:
                 try:
@@ -205,7 +205,7 @@ class TextWidget(QTextEdit):
         self.pos_parent = QPoint(0, 0)
         
         self.popup = Popup(self)
-        self.popup.move(0, 0)
+        self.popup.move(self.parent.config.x_screen, self.parent.config.y_screen)
         self.popup.resize(800, 800)
         
         font = self.currentFont()
@@ -286,6 +286,7 @@ class TextWidget(QTextEdit):
     def show_popup(self):
         if self.already_in:  # it could be that we exited the subtitles before getting there
             # we need this to take into account the zoom setting previously set
+            
             width = self.popup.base_width * (self.parent.config.default_zoom_popup
                                              + 0.05 * self.popup.zoom_timed) + 5
             height = self.popup.base_height * (self.parent.config.default_zoom_popup
@@ -306,12 +307,15 @@ class TextWidget(QTextEdit):
             # absolute coordinate of the top left of the current selection
             cursor_top = self.viewport().mapToGlobal(QPoint(rect.left(), rect.top()))
             
+            x_screen = self.parent.config.x_screen
             x_popup = (cursor_top.x()
-                       - self.fontMetrics().width(self.text[char_index:char_index + self.length_highlight])
+                       - self.fontMetrics().width(self.text[char_index:char_index
+                                                            + self.length_highlight])
                        + self.fontMetrics().width(self.text[char_index]) // 4)
             
-            if x_popup + width >= self.parent.config.screen_width:
-                x_popup = self.parent.config.screen_width - width
+            # make sure we don't go out of the screen
+            if x_popup + width >= (x_screen + self.parent.config.screen_width):
+                x_popup = x_screen + self.parent.config.screen_width - width
             
             y_popup = max(0, self.pos_parent.y() - height)
             
@@ -372,7 +376,8 @@ class TextWidget(QTextEdit):
                 # this resize is "needed" as I could so far not set the width of
                 # the popup no matter the size of the window. We make it bigger so that
                 # the `scrollWidth` value we get later makes sense
-                resize_value = self.parent.config.screen_width - self.popup.pos().x()
+                resize_value = (self.parent.config.x_screen
+                                + self.parent.config.screen_width - self.popup.pos().x())
                 self.popup.resize(resize_value, self.popup.height())
                 
                 # this show is needed to record later on the right size of the popup
@@ -501,7 +506,7 @@ class TextWidget(QTextEdit):
 
 class ParentFrame(QFrame):
     def __init__(self, config):
-        super().__init__(parent=None)
+        super().__init__()
         
         self.thread_subs = QThread()
         self.obj = thread_subtitles()
@@ -551,7 +556,7 @@ class ParentFrame(QFrame):
         
         self.subtext.setAlignment(Qt.AlignCenter)  # this should be before .show()
         self.show()
-        
+
         subs2 = text
         
         subs2 = subs2.split('\n')
@@ -585,7 +590,8 @@ class ParentFrame(QFrame):
         x = (self.config.screen_width / 2) - (width / 2)
         y = self.config.screen_height - height - config.bottom_spacing_pixels
         
-        self.setGeometry(int(x), int(y),
+        self.setGeometry(config.x_screen + int(x),
+                         config.y_screen + int(y),
                          width, height)
         
         self.subtext.setGeometry(0, self.stretch_pixels // 2,
@@ -637,7 +643,8 @@ class ParentFrame(QFrame):
                 x = (self.config.screen_width / 2) - (width / 2)
                 y = self.config.screen_height - height - config.bottom_spacing_pixels
                 
-                self.setGeometry(int(x), int(y),
+                self.setGeometry(config.x_screen + int(x),
+                                 config.y_screen + int(y),
                                  width, height)
                 
                 self.subtext.setGeometry(0, self.stretch_pixels // 2,
@@ -690,8 +697,11 @@ if __name__ == "__main__":
     
     app = QApplication(sys.argv)
     
-    config.screen_width = app.primaryScreen().size().width()
-    config.screen_height = app.primaryScreen().size().height()
+    config.screen_width = app.screens()[config.n_screen].size().width()
+    config.screen_height = app.screens()[config.n_screen].size().height()
+    config.x_screen = app.screens()[config.n_screen].geometry().x()
+    config.y_screen = app.screens()[config.n_screen].geometry().y()
     
     form = ParentFrame(config)
+    form.show()
     app.exec_()

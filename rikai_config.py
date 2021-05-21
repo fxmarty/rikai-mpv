@@ -14,10 +14,13 @@ style_subs = '''
 default_font_point_size = 50
 
 # default zoom of the popup
-default_zoom_popup = 1
+default_zoom_popup = 1.4
 
 # number of pixels to leave at the bottom of the screen, below subtitles
 bottom_spacing_pixels = 100
+
+# indicates the index of the screen the subtitles will be displayed on, to set manually
+n_screen = 1
 
 # Ideally, more parameters could be added here, as interSubs does:
 # https://github.com/oltodosel/interSubs/blob/master/interSubs_config.py
