@@ -19,7 +19,8 @@ default_zoom_popup = 1
 # number of pixels to leave at the bottom of the screen, below subtitles
 bottom_spacing_pixels = 100
 
-# indicates the index of the screen the subtitles will be displayed on, to set manually
+# indicates the index of the screen the subtitles will be displayed on, to set manually.
+# For example, if you have 3 screens, this number could be either 0, 1 or 2.
 n_screen = 0
 
 # Ideally, more parameters could be added here, as interSubs does:
