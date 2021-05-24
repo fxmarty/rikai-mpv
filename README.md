@@ -20,6 +20,7 @@ Dependencies are:
 * `PyQt5 >=5.9.2`
 * `QtWebEngineWidgets` (likely installed with `pip install PyQtWebEngine`, see [here](https://stackoverflow.com/a/54947671/4370080))
 * `node >=v14.16`
+* `socat`
 
 rikai-mpv may work with different versions, but has not been tested. A port into Windows should be doable, although we rely on Unix sockets for lua <--> python <--> node.js communication.
 
