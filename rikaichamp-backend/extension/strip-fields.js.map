@@ -1,1 +1,0 @@
-{"version":3,"file":"strip-fields.js","sourceRoot":"","sources":["../src/strip-fields.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH,MAAM,UAAU,WAAW,CACzB,CAAI,EACJ,MAAW;IAEX,MAAM,MAAM,qBAA6B,CAAE,CAAE,CAAC;IAC9C,KAAK,MAAM,KAAK,IAAI,MAAM,EAAE;QAC1B,OAAO,MAAM,CAAC,KAAK,CAAC,CAAC;KACtB;IACD,OAAmB,MAAM,CAAC;AAC5B,CAAC"}
