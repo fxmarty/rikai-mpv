@@ -75,7 +75,7 @@ RIGHT       no-osd sub-seek +1  # next subtitle
 * rikai-mpv is by default active **only in full screen mode**.
 * rikai-mpv overrides the settings set for subtitles styling in `mpv.conf`. You may wish to edit `rikai_config.py` to fit your needs.
 * rikai-mpv used to work with a secondary sid (e.g. in English) with mpv 0.29.1 (when activated at least once before turning on rikai-mpv), but does not with recent versions of mpv. A solution should be found, see https://github.com/mpv-player/mpv/issues/9175 for more information.
-* `rikai-backend` is not a complete port of rikaichamp features, as it (mainly) lacks support for automatic updates of the dictionary files and support for kanji dictionaries.
+* `rikaichamp-backend` is not a complete port of rikaichamp features, as it (mainly) lacks support for automatic updates of the dictionary files and support for kanji dictionaries.
 
 ## Build
 
