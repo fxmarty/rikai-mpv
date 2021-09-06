@@ -20,6 +20,8 @@ Dependencies are:
 * `PyQt5 >=5.9.2`
 * `QtWebEngineWidgets` (likely installed with `pip install PyQtWebEngine`, see [here](https://stackoverflow.com/a/54947671/4370080))
 * `node >=v14.16`
+* `typescript` (install with `npm install --global typescript`)
+* `yarn` (install with `npm install --global yarn`)
 * `socat`
 
 rikai-mpv may work with different versions, but has not been tested. A port into Windows should be doable, although we rely on Unix sockets for lua <--> python <--> node.js communication.
@@ -40,7 +42,11 @@ Add a symlink at the top of the `scripts` directory for mpv to detect it:
 ln -s rikai-mpv/front.lua .
 ```
 
+Then, go to `rikai-backend/` and run `tsc`. This is to compile typescript source into javascript.
+
 If necessary, modify `rikai_config.py` to fit your needs. The available options are limited right now and should be expended. In particular, if you use several screens, **set `n_screen` as a number corresponding to the screen you want the subtitles to be displayed on.**
+
+On KDE (kwin), go to Compositor settings and uncheck "Allow applications to block compositing". This is necessary to allow transparency. [Screenshot](https://iwf1.com/wordpress/wp-content/uploads/2017/09/Disable-applications-override-compositor-KDE.jpg).
 
 ## Key bindings
 
