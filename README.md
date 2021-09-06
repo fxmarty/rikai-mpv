@@ -28,7 +28,7 @@ rikai-mpv may work with different versions, but has not been tested. A port into
 
 ## Install
 
-Currently, the script supports **Linux only**. It has not been tested for Wayland-based display and has been designed for X. You can install as follow:
+Currently, the script supports **Linux only**. It has not been tested for Wayland-based display and has been designed for X11. You can install as follow:
 
 Clone in your `mpv/scripts/` folder (the install will break elsewhere):
 
@@ -42,7 +42,14 @@ Add a symlink at the top of the `scripts` directory for mpv to detect it:
 ln -s rikai-mpv/front.lua .
 ```
 
-Then, go to `rikai-backend/` and run `tsc`. This is to compile typescript source into javascript.
+Then, go to `rikai-mpv/rikai-backend/` and run:
+
+```
+yarn install
+tsc
+```
+
+This is to install necessary dependencies, and compile typescript source into javascript.
 
 If necessary, modify `rikai_config.py` to fit your needs. The available options are limited right now and should be expended. In particular, if you use several screens, **set `n_screen` as a number corresponding to the screen you want the subtitles to be displayed on.**
 
