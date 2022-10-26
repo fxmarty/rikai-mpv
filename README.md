@@ -98,3 +98,7 @@ The port of rikaichamp `rikaichamp-backend` is more or less [v0.3.5](https://git
 Compared to interSubs, the subtitle rendering uses `QTextEdit` instead of `QLabel`, which offers much more flexibility. Notably, interSubs was not fit for Japanese parsing, as it relies on spaces between words to query a dictionary. This implementation should be more flexible if it were to be merged into interSubs, as it allows parsing as many characters as needed and not just separated by blanks, e.g. interSubs could not parse "living room" as a single word, and could also not parse languages such as Chinese or Thai.
 
 A great thanks to [birtles](https://github.com/birtles) for helping me to get through rikaichamp's code!
+
+## License
+
+The code borrowed from rikaichamp and modified is published under GNU v3 license. The rest of the code base is published under the MIT license.
