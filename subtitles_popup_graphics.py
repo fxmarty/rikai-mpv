@@ -406,13 +406,14 @@ class TextWidget(QTextEdit):
         if not self.already_in:
             self.already_in = True
             self.setUpdatesEnabled(True)
-            self.previously_paused = mpv_pause_status()
-            mpv_pause()
+            if self.parent.config.autopause:
+                self.previously_paused = mpv_pause_status()
+                mpv_pause()
         
         super().enterEvent(event)
     
     def leaveEvent(self, event):
-        if not self.previously_paused:
+        if self.parent.config.autopause and not self.previously_paused:
             mpv_resume()
         
         self.already_in = False
